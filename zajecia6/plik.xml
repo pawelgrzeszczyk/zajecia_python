@@ -1,0 +1,859 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>The Mouse Vs. The Python</title>
+	<atom:link href="https://www.blog.pythonlibrary.org/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.blog.pythonlibrary.org</link>
+	<description>Python Programming from the Frontlines</description>
+	<lastBuildDate>Mon, 20 Nov 2017 13:30:37 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9</generator>
+	<item>
+		<title>PyDev of the Week: Adrian Rosebrock</title>
+		<link>https://www.blog.pythonlibrary.org/2017/11/20/pydev-of-the-week-adrian-rosebrock/</link>
+		<comments>https://www.blog.pythonlibrary.org/2017/11/20/pydev-of-the-week-adrian-rosebrock/#comments</comments>
+		<pubDate>Mon, 20 Nov 2017 13:30:37 +0000</pubDate>
+		<dc:creator><![CDATA[Mike]]></dc:creator>
+				<category><![CDATA[PyDevOfTheWeek]]></category>
+		<category><![CDATA[Python]]></category>
+		<category><![CDATA[images]]></category>
+		<category><![CDATA[opencv]]></category>
+
+		<guid isPermaLink="false">http://www.blog.pythonlibrary.org/?p=6756</guid>
+		<description><![CDATA[This week we welcome Adrian Rosebrock (@PyImageSearch) as our PyDev of the Week. Adrian is the author of several books on Python and OpenCV. He is also the author of PyImageSearch.com, a very popular Python blog that focuses on computer vision. Let&#8217;s take some time to get to know him a bit better! Can you &#8230; <a href="https://www.blog.pythonlibrary.org/2017/11/20/pydev-of-the-week-adrian-rosebrock/" class="more-link">Continue reading <span class="screen-reader-text">PyDev of the Week: Adrian Rosebrock</span> <span class="meta-nav">&#8594;</span></a>]]></description>
+				<content:encoded><![CDATA[<div class="pf-content"><p>This week we welcome Adrian Rosebrock (<a href="https://twitter.com/PyImageSearch" rel="noopener" target="_blank">@PyImageSearch</a>) as our PyDev of the Week. Adrian is the author of several books on Python and OpenCV. He is also the author of <a href="https://www.pyimagesearch.com/" rel="noopener" target="_blank">PyImageSearch.com</a>, a very popular Python blog that focuses on computer vision. Let&#8217;s take some time to get to know him a bit better!</p>
+<p><strong>Can you tell us about yourself and PyImageSearch?</strong></p>
+<p><img src="http://www.blog.pythonlibrary.org/wp-content/uploads/2017/10/adrianrosebrock-300x232.jpg" alt="" width="300" height="232" class="aligncenter size-medium wp-image-6758" srcset="https://www.blog.pythonlibrary.org/wp-content/uploads/2017/10/adrianrosebrock-300x232.jpg 300w, https://www.blog.pythonlibrary.org/wp-content/uploads/2017/10/adrianrosebrock.jpg 432w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<p>Hi Mike, thank you for the opportunity to be interviewed on PyDev of the Week.</p>
+<p>My name is Adrian Rosebrock. I have Ph.D in computer science with a focus in computer vision and machine learning from the University of Maryland, Baltimore County (UMBC).</p>
+<p>I blog over at <a href="https://www.pyimagesearch.com/" rel="noopener" target="_blank">PyImageSearch.com</a> about Python, computer vision, and deep learning. Over the past few years running PyImageSearch I have written a handful of books/courses, including:</p>
+<ul>
+<li><a href="https://www.pyimagesearch.com/practical-python-opencv/" rel="noopener" target="_blank">Practical Python and OpenCV</a>, a gentle introduction to the world of computer vision and OpenCV using Python.</li>
+<li><a href="https://www.pyimagesearch.com/pyimagesearch-gurus/" rel="noopener" target="_blank">PyImageSearch Gurus</a>, an in-depth dive into computer vision, similar to what you may find in a college-level course, only *much* more hands-on and practical.</li>
+<li><a href="https://www.pyimagesearch.com/deep-learning-computer-vision-python-book/" rel="noopener" target="_blank">Deep Learning for Computer Vision with Python</a>, my brand new 800+ page book. This book is my *magnum opus* and is for readers who want to master neural networks and deep learning.</li>
+</ul>
+<p><span id="more-6756"></span></p>
+<p><strong>What are your hobbies?</strong></p>
+<p>Fitness is a big part of my life so when I&#8217;m not working or coding I spend a lot of my time at the gym.</p>
+<p>I&#8217;ve always been interested in sports and physical activity. Growing up I played soccer, baseball, basketball, and a handful of other sports.</p>
+<p>By my junior year of college I started getting into weight lifting. A buddy in my operating systems class offered to take me to the weight room and teach me a few lifts.</p>
+<p>Since then I&#8217;ve been focusing less on team sports and more on lifting. I do a combination of olympic lifting, CrossFit, and personal training. I like the constant variation and challenging my body.</p>
+<p>Otherwise, I&#8217;m a big RPG fan, especially the old school RPGs on the SNES. I&#8217;ve played through the <em>Final Fantasy</em> series way too many times to count.</p>
+<p><strong>When did you start using Python?</strong></p>
+<p>The first time I used Python was about 13 years ago, so about 15 years ago, sometime around the Python 2.1/Python 2.2 release.</p>
+<p>I was just getting into programming, and to be honest, I didn&#8217;t like Python at first. I didn&#8217;t fully understand the point of Read-Eval-Print Loop (REPL) and I was still trying to get used to the command line environment and Unix-environments.</p>
+<p>At that time Python was a little too complicated for my (extremely) novice programming skills. I continued to play with Python as I learned to code in other languages, but it wasn&#8217;t until sophomore year of college that I <strong>really</strong> got back into Python.</p>
+<p>Since then, Python has been my programming language of choice.</p>
+<p><strong>What other programming languages do you know and which is your favorite?</strong></p>
+<p>There is a difference between knowing the syntax of a language versus knowing the libraries and ecosystem associated with a language.</p>
+<p>While in graduate school I did a lot of work in big data, mainly with Hadoop clusters &mdash; this required me to do a lot of coding in Java. Java was also used for most of the 200 and 300 level classes at UMBC (especially data structures, although now UMBC uses Python).</p>
+<p>My first job out of college also required me to use Java on Hadoop clusters and Accumulo databases. Because of this, I became *very* familiar with Java libraries and building scalable data workflows and predictive models.</p>
+<p>I also know PHP far too well then I care to admit. I picked up the language as it had C-like syntax but with a scripting language flavor. This also opened the door for my early career in web development.</p>
+<p>While in my undergraduate years I worked for <a href="http://RateMyTeachers.com" rel="noopener" target="_blank">RateMyTeachers.com</a>, starting off as a junior developer, working my way up to senior developer, and eventually becoming the CTO.</p>
+<p>Along the way I rewrote the site from scratch in PHP and the CodeIgniter framework (this is well before Laravel or any other mature, decent PHP framework that could easily scale existed). This helped me learn a lot about scalability and web applications.</p>
+<p>I also know C/C++ fairly well, but nowadays I mainly only use them for optimizing various Python routines.</p>
+<p>At this point in my life I can say that Python is undoubtedly my favorite programming language. I use it for everything from production code to one-off scripts that need to parse a log file. It truly is a versatile language.</p>
+<p><strong>What projects are you working on now?</strong></p>
+<p>Besides the handful of consulting/contracting jobs I&#8217;m working on, my primary focus is PyImageSearch and creating quality computer vision and deep learning tutorials centered around the Python programming language.</p>
+<p>I just released my new book, <a href="https://www.pyimagesearch.com/deep-learning-computer-vision-python-book/" rel="noopener" target="_blank"><em>Deep Learning for Computer Vision with Python</em></a>, earlier this month.</p>
+<p>Throughout the rest of this year I&#8217;ll be finalizing the details on <a href="https://www.pyimageconf.com/" rel="noopener" target="_blank">PyImageConf</a> a conference I&#8217;ll be hosting in San Francisco, CA in 2018.</p>
+<p>I also have a few other books in the works for 2018 as well.</p>
+<p><strong>Which Python libraries are your favorite (core or 3rd party)?</strong></p>
+<p>OpenCV, while not a pure Python library, provides Python bindings. Without OpenCV computer vision would not be as easily accessible. I use OpenCV daily.</p>
+<p>The same can be said for both NumPy and SciPy &mdash; this libraries are *heavily* responsible for researchers, practitioners, and data scientists moving to the Python programming language. NumPy and SciPy play a pivotal role in every single computer vision + machine learning script I write.</p>
+<p>Scikit-learn and scikit-image are another set of libraries I use daily. Without scikit-learn I would have really struggled to finish the research associated with my dissertation.</p>
+<p>Finally, I cannot say enough positive things about Keras. Just as scikit-learn has made machine learning accessible, Keras has done the same for deep learning.</p>
+<p><strong>How did you become an author?</strong></p>
+<p>I became an author at the exact same time I became an entrepreneur. As a young kid, perhaps only seven or eight years old, I was an avid reader. I read everything I could get my hands on.</p>
+<p>At some point early in my childhood I decided I wanted to write my own books.</p>
+<p>And that&#8217;s exactly what I did.</p>
+<p>I would take 20ish index cards, write my own story on the index cards (normally focused on horror stories), and then design my own cover using thick cardboard. I would color in the cover using crayons. And then finally staple it all together to create a book.</p>
+<p>Once the book was done I would sell it to my parents for a quarter.</p>
+<p>When I was a kid I wanted to be either (1) an author or (2) an architect. In many ways I have combined both of them as an adult.</p>
+<p><strong>Can you describe some of the things you&#8217;ve learned while writing your books?</strong></p>
+<p>I&#8217;ve been developing software as a career since was 17 years old but it wasn&#8217;t until my mid-20&#8217;s that I started writing computer vision books.</p>
+<p>Writing wasn&#8217;t a challenge for me &mdash; I had years of experience writing, especially considering my dissertation.</p>
+<p>But marketing and selling a book was brand new territory. At first I didn&#8217;t know what I was doing. There was a lot of blind experimentation going on.</p>
+<p>I was (pleasantly) surprised to discover that shipping and selling a book isn&#8217;t much different than shipping a piece of software: initial user feedback matters.</p>
+<p>In my case, I wrote drafts of books and released them before they were 100% finalized. This helped me get initial reader feedback <em>faster</em> and then <em>iterate</em> on the book; the exact process you would take if you were validating a SaaS venture.</p>
+<p>It turned out that the skills I learned working for small, startup companies in the software space were <em>directly transferable</em> to writing a book.</p>
+<p><strong>Is there anything else you&#8217;d like to say?</strong></p>
+<p>I just wanted to say thank you again for the opportunity and interview.</p>
+<p>If you want to learn more about me, please head over to <a href="https://www.pyimagesearch.com/" rel="noopener" target="_blank">PyImageSearch.com</a>. You can also <a href="https://twitter.com/PyImageSearch" rel="noopener" target="_blank">follow me on Twitter</a>.</p>
+<p>And if you&#8217;re interested in learning more about my new book, Deep Learning for Computer Vision with Python, <a href="https://www.pyimagesearch.com/deep-learning-computer-vision-python-book/" rel="noopener" target="_blank">just click here</a> and grab your free set of sample chapters and Table of Contents.</p>
+<p><strong>Thanks for doing the interview!</strong></p>
+</div><p><a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=https%3A%2F%2Fwww.blog.pythonlibrary.org%2F2017%2F11%2F20%2Fpydev-of-the-week-adrian-rosebrock%2F&amp;linkname=PyDev%20of%20the%20Week%3A%20Adrian%20Rosebrock" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=https%3A%2F%2Fwww.blog.pythonlibrary.org%2F2017%2F11%2F20%2Fpydev-of-the-week-adrian-rosebrock%2F&amp;linkname=PyDev%20of%20the%20Week%3A%20Adrian%20Rosebrock" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_google_plus" href="https://www.addtoany.com/add_to/google_plus?linkurl=https%3A%2F%2Fwww.blog.pythonlibrary.org%2F2017%2F11%2F20%2Fpydev-of-the-week-adrian-rosebrock%2F&amp;linkname=PyDev%20of%20the%20Week%3A%20Adrian%20Rosebrock" title="Google+" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save" href="https://www.addtoany.com/share#url=https%3A%2F%2Fwww.blog.pythonlibrary.org%2F2017%2F11%2F20%2Fpydev-of-the-week-adrian-rosebrock%2F&amp;title=PyDev%20of%20the%20Week%3A%20Adrian%20Rosebrock" data-a2a-url="https://www.blog.pythonlibrary.org/2017/11/20/pydev-of-the-week-adrian-rosebrock/" data-a2a-title="PyDev of the Week: Adrian Rosebrock"></a></p>]]></content:encoded>
+			<wfw:commentRss>https://www.blog.pythonlibrary.org/2017/11/20/pydev-of-the-week-adrian-rosebrock/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+		<item>
+		<title>wxPython: Moving items in ObjectListView</title>
+		<link>https://www.blog.pythonlibrary.org/2017/11/16/wxpython-moving-items-in-objectlistview/</link>
+		<comments>https://www.blog.pythonlibrary.org/2017/11/16/wxpython-moving-items-in-objectlistview/#respond</comments>
+		<pubDate>Thu, 16 Nov 2017 18:15:13 +0000</pubDate>
+		<dc:creator><![CDATA[Mike]]></dc:creator>
+				<category><![CDATA[Python]]></category>
+		<category><![CDATA[wxPython]]></category>
+
+		<guid isPermaLink="false">http://www.blog.pythonlibrary.org/?p=6858</guid>
+		<description><![CDATA[I was recently asked about how to implement drag-and-drop of items in a wx.ListCtrl or in ObjectListView. Unfortunately neither control has this built-in although I did find an article on the wxPython wiki that demonstrated one way to do drag-and-drop of the items in a ListCtrl. However I did think that implementing some buttons to &#8230; <a href="https://www.blog.pythonlibrary.org/2017/11/16/wxpython-moving-items-in-objectlistview/" class="more-link">Continue reading <span class="screen-reader-text">wxPython: Moving items in ObjectListView</span> <span class="meta-nav">&#8594;</span></a>]]></description>
+				<content:encoded><![CDATA[<div class="pf-content"><p>I was recently asked about how to implement drag-and-drop of items in a <strong>wx.ListCtrl</strong> or in <strong>ObjectListView</strong>. Unfortunately neither control has this built-in although I did find an <a href="https://wiki.wxpython.org/ListControls" rel="noopener" target="_blank">article</a> on the wxPython wiki that demonstrated one way to do drag-and-drop of the items in a ListCtrl.</p>
+<p>However I did think that implementing some buttons to move items around in an ObjectListView widget should be fairly easy to implement. So that&#8217;s what this article will be focusing on.</p>
+<hr/>
+<h3>Changing Item Order</h3>
+<p><img src="http://www.blog.pythonlibrary.org/wp-content/uploads/2017/11/olv_item_mover.png" alt="" width="725" height="242" class="aligncenter size-full wp-image-6865" srcset="https://www.blog.pythonlibrary.org/wp-content/uploads/2017/11/olv_item_mover.png 725w, https://www.blog.pythonlibrary.org/wp-content/uploads/2017/11/olv_item_mover-300x100.png 300w" sizes="(max-width: 725px) 100vw, 725px" /></p>
+<p>If you don&#8217;t have wxPython and ObjectListView installed, then you will want to use pip to install them:</p>
+<pre class="python">pip install wxPython objectlistview</pre>
+<p>Once that is done, open up your favorite text editor or IDE and enter the following code:<span id="more-6858"></span></p>
+<pre class="python"><span style="color: #ff7700;font-weight:bold;">import</span> wx
+<span style="color: #ff7700;font-weight:bold;">from</span> ObjectListView <span style="color: #ff7700;font-weight:bold;">import</span> ObjectListView, ColumnDefn
+&nbsp;
+&nbsp;
+<span style="color: #ff7700;font-weight:bold;">class</span> Book<span style="color: black;">&#40;</span><span style="color: #008000;">object</span><span style="color: black;">&#41;</span>:
+    <span style="color: #483d8b;">&quot;&quot;</span><span style="color: #483d8b;">&quot;
+    Model of the Book object
+    Contains the following attributes:
+    'ISBN', 'Author', 'Manufacturer', 'Title'
+    &quot;</span><span style="color: #483d8b;">&quot;&quot;</span>
+&nbsp;
+    <span style="color: #ff7700;font-weight:bold;">def</span> <span style="color: #0000cd;">__init__</span><span style="color: black;">&#40;</span><span style="color: #008000;">self</span>, title, author, isbn, mfg<span style="color: black;">&#41;</span>:
+        <span style="color: #008000;">self</span>.<span style="color: black;">isbn</span> = isbn
+        <span style="color: #008000;">self</span>.<span style="color: black;">author</span> = author
+        <span style="color: #008000;">self</span>.<span style="color: black;">mfg</span> = mfg
+        <span style="color: #008000;">self</span>.<span style="color: black;">title</span> = title
+&nbsp;
+    <span style="color: #ff7700;font-weight:bold;">def</span> <span style="color: #0000cd;">__repr__</span><span style="color: black;">&#40;</span><span style="color: #008000;">self</span><span style="color: black;">&#41;</span>:
+        <span style="color: #ff7700;font-weight:bold;">return</span> <span style="color: #483d8b;">&quot;&lt;Book: {title}&gt;&quot;</span>.<span style="color: black;">format</span><span style="color: black;">&#40;</span>title=<span style="color: #008000;">self</span>.<span style="color: black;">title</span><span style="color: black;">&#41;</span>
+&nbsp;
+&nbsp;
+<span style="color: #ff7700;font-weight:bold;">class</span> MainPanel<span style="color: black;">&#40;</span>wx.<span style="color: black;">Panel</span><span style="color: black;">&#41;</span>:
+&nbsp;
+    <span style="color: #ff7700;font-weight:bold;">def</span> <span style="color: #0000cd;">__init__</span><span style="color: black;">&#40;</span><span style="color: #008000;">self</span>, parent<span style="color: black;">&#41;</span>:
+        wx.<span style="color: black;">Panel</span>.<span style="color: #0000cd;">__init__</span><span style="color: black;">&#40;</span><span style="color: #008000;">self</span>, parent=parent, <span style="color: #008000;">id</span>=wx.<span style="color: black;">ID_ANY</span><span style="color: black;">&#41;</span>
+        <span style="color: #008000;">self</span>.<span style="color: black;">current_selection</span> = <span style="color: #008000;">None</span>
+        <span style="color: #008000;">self</span>.<span style="color: black;">products</span> = <span style="color: black;">&#91;</span>Book<span style="color: black;">&#40;</span><span style="color: #483d8b;">&quot;wxPython in Action&quot;</span>, <span style="color: #483d8b;">&quot;Robin Dunn&quot;</span>,
+                              <span style="color: #483d8b;">&quot;1932394621&quot;</span>, <span style="color: #483d8b;">&quot;Manning&quot;</span><span style="color: black;">&#41;</span>,
+                         Book<span style="color: black;">&#40;</span><span style="color: #483d8b;">&quot;Hello World&quot;</span>, <span style="color: #483d8b;">&quot;Warren and Carter Sande&quot;</span>,
+                              <span style="color: #483d8b;">&quot;1933988495&quot;</span>, <span style="color: #483d8b;">&quot;Manning&quot;</span><span style="color: black;">&#41;</span>,
+                         Book<span style="color: black;">&#40;</span><span style="color: #483d8b;">&quot;Core Python Programming&quot;</span>, <span style="color: #483d8b;">&quot;Wesley Chun&quot;</span>,
+                             <span style="color: #483d8b;">&quot;0132269937&quot;</span>, <span style="color: #483d8b;">&quot;Prentice Hall&quot;</span><span style="color: black;">&#41;</span>,
+                         Book<span style="color: black;">&#40;</span><span style="color: #483d8b;">&quot;Python Programming for the Absolute Beginner&quot;</span>,
+                              <span style="color: #483d8b;">&quot;Michael Dawson&quot;</span>, <span style="color: #483d8b;">&quot;1598631128&quot;</span>,
+                              <span style="color: #483d8b;">&quot;Course Technology&quot;</span><span style="color: black;">&#41;</span>,
+                         Book<span style="color: black;">&#40;</span><span style="color: #483d8b;">&quot;Learning Python&quot;</span>, <span style="color: #483d8b;">&quot;Mark Lutz&quot;</span>,
+                              <span style="color: #483d8b;">&quot;0596513984&quot;</span>, <span style="color: #483d8b;">&quot;O'Reilly&quot;</span><span style="color: black;">&#41;</span>
+                         <span style="color: black;">&#93;</span>
+&nbsp;
+        <span style="color: #008000;">self</span>.<span style="color: black;">dataOlv</span> = ObjectListView<span style="color: black;">&#40;</span><span style="color: #008000;">self</span>, wx.<span style="color: black;">ID_ANY</span>, 
+                                      style=wx.<span style="color: black;">LC_REPORT</span>|wx.<span style="color: black;">SUNKEN_BORDER</span><span style="color: black;">&#41;</span>
+        <span style="color: #008000;">self</span>.<span style="color: black;">setBooks</span><span style="color: black;">&#40;</span><span style="color: black;">&#41;</span>
+&nbsp;
+        <span style="color: #808080; font-style: italic;"># Allow the cell values to be edited when double-clicked</span>
+        <span style="color: #008000;">self</span>.<span style="color: black;">dataOlv</span>.<span style="color: black;">cellEditMode</span> = ObjectListView.<span style="color: black;">CELLEDIT_SINGLECLICK</span>
+&nbsp;
+        <span style="color: #808080; font-style: italic;"># create up and down buttons</span>
+        up_btn = wx.<span style="color: black;">Button</span><span style="color: black;">&#40;</span><span style="color: #008000;">self</span>, wx.<span style="color: black;">ID_ANY</span>, <span style="color: #483d8b;">&quot;Up&quot;</span><span style="color: black;">&#41;</span>
+        up_btn.<span style="color: black;">Bind</span><span style="color: black;">&#40;</span>wx.<span style="color: black;">EVT_BUTTON</span>, <span style="color: #008000;">self</span>.<span style="color: black;">move_up</span><span style="color: black;">&#41;</span>
+&nbsp;
+        down_btn = wx.<span style="color: black;">Button</span><span style="color: black;">&#40;</span><span style="color: #008000;">self</span>, wx.<span style="color: black;">ID_ANY</span>, <span style="color: #483d8b;">&quot;Down&quot;</span><span style="color: black;">&#41;</span>
+        down_btn.<span style="color: black;">Bind</span><span style="color: black;">&#40;</span>wx.<span style="color: black;">EVT_BUTTON</span>, <span style="color: #008000;">self</span>.<span style="color: black;">move_down</span><span style="color: black;">&#41;</span>
+&nbsp;
+        <span style="color: #808080; font-style: italic;"># Create some sizers</span>
+        mainSizer = wx.<span style="color: black;">BoxSizer</span><span style="color: black;">&#40;</span>wx.<span style="color: black;">VERTICAL</span><span style="color: black;">&#41;</span>
+&nbsp;
+        mainSizer.<span style="color: black;">Add</span><span style="color: black;">&#40;</span><span style="color: #008000;">self</span>.<span style="color: black;">dataOlv</span>, <span style="color: #ff4500;">1</span>, wx.<span style="color: black;">ALL</span>|wx.<span style="color: black;">EXPAND</span>, <span style="color: #ff4500;">5</span><span style="color: black;">&#41;</span>
+        mainSizer.<span style="color: black;">Add</span><span style="color: black;">&#40;</span>up_btn, <span style="color: #ff4500;">0</span>, wx.<span style="color: black;">ALL</span>|wx.<span style="color: black;">CENTER</span>, <span style="color: #ff4500;">5</span><span style="color: black;">&#41;</span>
+        mainSizer.<span style="color: black;">Add</span><span style="color: black;">&#40;</span>down_btn, <span style="color: #ff4500;">0</span>, wx.<span style="color: black;">ALL</span>|wx.<span style="color: black;">CENTER</span>, <span style="color: #ff4500;">5</span><span style="color: black;">&#41;</span>
+        <span style="color: #008000;">self</span>.<span style="color: black;">SetSizer</span><span style="color: black;">&#40;</span>mainSizer<span style="color: black;">&#41;</span>
+&nbsp;
+    <span style="color: #ff7700;font-weight:bold;">def</span> move_up<span style="color: black;">&#40;</span><span style="color: #008000;">self</span>, event<span style="color: black;">&#41;</span>:
+        <span style="color: #483d8b;">&quot;&quot;</span><span style="color: #483d8b;">&quot;
+        Move an item up the list
+        &quot;</span><span style="color: #483d8b;">&quot;&quot;</span>        
+        <span style="color: #008000;">self</span>.<span style="color: black;">current_selection</span> = <span style="color: #008000;">self</span>.<span style="color: black;">dataOlv</span>.<span style="color: black;">GetSelectedObject</span><span style="color: black;">&#40;</span><span style="color: black;">&#41;</span>
+        data = <span style="color: #008000;">self</span>.<span style="color: black;">dataOlv</span>.<span style="color: black;">GetObjects</span><span style="color: black;">&#40;</span><span style="color: black;">&#41;</span>
+        <span style="color: #ff7700;font-weight:bold;">if</span> <span style="color: #008000;">self</span>.<span style="color: black;">current_selection</span>:
+            index = data.<span style="color: black;">index</span><span style="color: black;">&#40;</span><span style="color: #008000;">self</span>.<span style="color: black;">current_selection</span><span style="color: black;">&#41;</span>
+            <span style="color: #ff7700;font-weight:bold;">if</span> index <span style="color: #66cc66;">&gt;</span> <span style="color: #ff4500;">0</span>:
+                new_index = index - <span style="color: #ff4500;">1</span>
+            <span style="color: #ff7700;font-weight:bold;">else</span>:
+                new_index = <span style="color: #008000;">len</span><span style="color: black;">&#40;</span>data<span style="color: black;">&#41;</span><span style="color: #ff4500;">-1</span>
+            data.<span style="color: black;">insert</span><span style="color: black;">&#40;</span>new_index, data.<span style="color: black;">pop</span><span style="color: black;">&#40;</span>index<span style="color: black;">&#41;</span><span style="color: black;">&#41;</span>
+            <span style="color: #008000;">self</span>.<span style="color: black;">products</span> = data
+            <span style="color: #008000;">self</span>.<span style="color: black;">setBooks</span><span style="color: black;">&#40;</span><span style="color: black;">&#41;</span>
+            <span style="color: #008000;">self</span>.<span style="color: black;">dataOlv</span>.<span style="color: black;">Select</span><span style="color: black;">&#40;</span>new_index<span style="color: black;">&#41;</span>
+&nbsp;
+    <span style="color: #ff7700;font-weight:bold;">def</span> move_down<span style="color: black;">&#40;</span><span style="color: #008000;">self</span>, event<span style="color: black;">&#41;</span>:
+        <span style="color: #483d8b;">&quot;&quot;</span><span style="color: #483d8b;">&quot;
+        Move an item down the list
+        &quot;</span><span style="color: #483d8b;">&quot;&quot;</span>
+        <span style="color: #008000;">self</span>.<span style="color: black;">current_selection</span> = <span style="color: #008000;">self</span>.<span style="color: black;">dataOlv</span>.<span style="color: black;">GetSelectedObject</span><span style="color: black;">&#40;</span><span style="color: black;">&#41;</span>
+        data = <span style="color: #008000;">self</span>.<span style="color: black;">dataOlv</span>.<span style="color: black;">GetObjects</span><span style="color: black;">&#40;</span><span style="color: black;">&#41;</span>
+        <span style="color: #ff7700;font-weight:bold;">if</span> <span style="color: #008000;">self</span>.<span style="color: black;">current_selection</span>:
+            index = data.<span style="color: black;">index</span><span style="color: black;">&#40;</span><span style="color: #008000;">self</span>.<span style="color: black;">current_selection</span><span style="color: black;">&#41;</span>
+            <span style="color: #ff7700;font-weight:bold;">if</span> index <span style="color: #66cc66;">&lt;</span> <span style="color: #008000;">len</span><span style="color: black;">&#40;</span>data<span style="color: black;">&#41;</span> - <span style="color: #ff4500;">1</span>:
+                new_index = index + <span style="color: #ff4500;">1</span>
+            <span style="color: #ff7700;font-weight:bold;">else</span>:
+                new_index = <span style="color: #ff4500;">0</span>
+            data.<span style="color: black;">insert</span><span style="color: black;">&#40;</span>new_index, data.<span style="color: black;">pop</span><span style="color: black;">&#40;</span>index<span style="color: black;">&#41;</span><span style="color: black;">&#41;</span>
+            <span style="color: #008000;">self</span>.<span style="color: black;">products</span> = data
+            <span style="color: #008000;">self</span>.<span style="color: black;">setBooks</span><span style="color: black;">&#40;</span><span style="color: black;">&#41;</span>
+            <span style="color: #008000;">self</span>.<span style="color: black;">dataOlv</span>.<span style="color: black;">Select</span><span style="color: black;">&#40;</span>new_index<span style="color: black;">&#41;</span>
+&nbsp;
+    <span style="color: #ff7700;font-weight:bold;">def</span> setBooks<span style="color: black;">&#40;</span><span style="color: #008000;">self</span><span style="color: black;">&#41;</span>:
+        <span style="color: #008000;">self</span>.<span style="color: black;">dataOlv</span>.<span style="color: black;">SetColumns</span><span style="color: black;">&#40;</span><span style="color: black;">&#91;</span>
+            ColumnDefn<span style="color: black;">&#40;</span><span style="color: #483d8b;">&quot;Title&quot;</span>, <span style="color: #483d8b;">&quot;left&quot;</span>, <span style="color: #ff4500;">220</span>, <span style="color: #483d8b;">&quot;title&quot;</span><span style="color: black;">&#41;</span>,
+            ColumnDefn<span style="color: black;">&#40;</span><span style="color: #483d8b;">&quot;Author&quot;</span>, <span style="color: #483d8b;">&quot;left&quot;</span>, <span style="color: #ff4500;">200</span>, <span style="color: #483d8b;">&quot;author&quot;</span><span style="color: black;">&#41;</span>,
+            ColumnDefn<span style="color: black;">&#40;</span><span style="color: #483d8b;">&quot;ISBN&quot;</span>, <span style="color: #483d8b;">&quot;right&quot;</span>, <span style="color: #ff4500;">100</span>, <span style="color: #483d8b;">&quot;isbn&quot;</span><span style="color: black;">&#41;</span>,
+            ColumnDefn<span style="color: black;">&#40;</span><span style="color: #483d8b;">&quot;Mfg&quot;</span>, <span style="color: #483d8b;">&quot;left&quot;</span>, <span style="color: #ff4500;">180</span>, <span style="color: #483d8b;">&quot;mfg&quot;</span><span style="color: black;">&#41;</span>
+        <span style="color: black;">&#93;</span><span style="color: black;">&#41;</span>
+&nbsp;
+        <span style="color: #008000;">self</span>.<span style="color: black;">dataOlv</span>.<span style="color: black;">SetObjects</span><span style="color: black;">&#40;</span><span style="color: #008000;">self</span>.<span style="color: black;">products</span><span style="color: black;">&#41;</span>
+&nbsp;
+&nbsp;
+<span style="color: #ff7700;font-weight:bold;">class</span> MainFrame<span style="color: black;">&#40;</span>wx.<span style="color: black;">Frame</span><span style="color: black;">&#41;</span>:
+    <span style="color: #ff7700;font-weight:bold;">def</span> <span style="color: #0000cd;">__init__</span><span style="color: black;">&#40;</span><span style="color: #008000;">self</span><span style="color: black;">&#41;</span>:
+        wx.<span style="color: black;">Frame</span>.<span style="color: #0000cd;">__init__</span><span style="color: black;">&#40;</span><span style="color: #008000;">self</span>, parent=<span style="color: #008000;">None</span>, <span style="color: #008000;">id</span>=wx.<span style="color: black;">ID_ANY</span>, 
+                          title=<span style="color: #483d8b;">&quot;ObjectListView Demo&quot;</span>, size=<span style="color: black;">&#40;</span><span style="color: #ff4500;">800</span>,<span style="color: #ff4500;">600</span><span style="color: black;">&#41;</span><span style="color: black;">&#41;</span>
+        panel = MainPanel<span style="color: black;">&#40;</span><span style="color: #008000;">self</span><span style="color: black;">&#41;</span>
+        <span style="color: #008000;">self</span>.<span style="color: black;">Show</span><span style="color: black;">&#40;</span><span style="color: black;">&#41;</span>
+&nbsp;
+&nbsp;
+<span style="color: #ff7700;font-weight:bold;">if</span> __name__ == <span style="color: #483d8b;">&quot;__main__&quot;</span>:
+    app = wx.<span style="color: black;">App</span><span style="color: black;">&#40;</span><span style="color: #008000;">False</span><span style="color: black;">&#41;</span>
+    frame = MainFrame<span style="color: black;">&#40;</span><span style="color: black;">&#41;</span>
+    app.<span style="color: black;">MainLoop</span><span style="color: black;">&#40;</span><span style="color: black;">&#41;</span></pre>
+<p>The code we care about most in this example are the <strong>move_up()</strong> and <strong>move_down()</strong> methods. Each of these methods will check to see if you have an item in the ObjectListView widget selected. It will also grab the current contents of the widgets. If you have an item selected, then it will grab that item&#8217;s index from the ObjectListView widget&#8217;s <strong>data</strong> that we grabbed when we called <strong>GetObjects()</strong>. Then we can use that index to determine whether we should increment (move_down) or decrement (move_up) its index depending on which of the buttons we press.</p>
+<p>After we update the list with the changed positions, then we update <strong>self.products</strong>, which is our class variable that we use in the <strong>setBooks()</strong> to update our ObjectListView widget. Finally we actually call <strong>setBooks()</strong> and we reset the selection since our original selection moved. </p>
+<hr/>
+<h3>Wrapping Up</h3>
+<p>I thought this was a neat little project that didn&#8217;t take very long to put together. I will note that there is at least one issue with this implementation and that is that it doesn&#8217;t work correctly when you select multiple items in the control. You could probably fix this by disabling multiple selection in your ObjectListView widget or by figuring out the logic to make it work with multiple selections. But I will leave that up the reader to figure out. Have fun an happy coding!</p>
+</div><p><a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=https%3A%2F%2Fwww.blog.pythonlibrary.org%2F2017%2F11%2F16%2Fwxpython-moving-items-in-objectlistview%2F&amp;linkname=wxPython%3A%20Moving%20items%20in%20ObjectListView" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=https%3A%2F%2Fwww.blog.pythonlibrary.org%2F2017%2F11%2F16%2Fwxpython-moving-items-in-objectlistview%2F&amp;linkname=wxPython%3A%20Moving%20items%20in%20ObjectListView" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_google_plus" href="https://www.addtoany.com/add_to/google_plus?linkurl=https%3A%2F%2Fwww.blog.pythonlibrary.org%2F2017%2F11%2F16%2Fwxpython-moving-items-in-objectlistview%2F&amp;linkname=wxPython%3A%20Moving%20items%20in%20ObjectListView" title="Google+" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save" href="https://www.addtoany.com/share#url=https%3A%2F%2Fwww.blog.pythonlibrary.org%2F2017%2F11%2F16%2Fwxpython-moving-items-in-objectlistview%2F&amp;title=wxPython%3A%20Moving%20items%20in%20ObjectListView" data-a2a-url="https://www.blog.pythonlibrary.org/2017/11/16/wxpython-moving-items-in-objectlistview/" data-a2a-title="wxPython: Moving items in ObjectListView"></a></p>]]></content:encoded>
+			<wfw:commentRss>https://www.blog.pythonlibrary.org/2017/11/16/wxpython-moving-items-in-objectlistview/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Book Review: Python Testing with pytest</title>
+		<link>https://www.blog.pythonlibrary.org/2017/11/14/book-review-python-testing-with-pytest/</link>
+		<comments>https://www.blog.pythonlibrary.org/2017/11/14/book-review-python-testing-with-pytest/#comments</comments>
+		<pubDate>Tue, 14 Nov 2017 18:15:17 +0000</pubDate>
+		<dc:creator><![CDATA[Mike]]></dc:creator>
+				<category><![CDATA[Books]]></category>
+		<category><![CDATA[Python]]></category>
+		<category><![CDATA[Book Review]]></category>
+
+		<guid isPermaLink="false">http://www.blog.pythonlibrary.org/?p=6841</guid>
+		<description><![CDATA[A couple of months ago, Brian Okken asked me if I would be interested in reading his book, Python Testing with pytest. I have been interested in learning more about the pytest package for a while, so I agreed to take a look. I also liked that the publisher was The Pragmatic Programmers, which I&#8217;ve &#8230; <a href="https://www.blog.pythonlibrary.org/2017/11/14/book-review-python-testing-with-pytest/" class="more-link">Continue reading <span class="screen-reader-text">Book Review: Python Testing with pytest</span> <span class="meta-nav">&#8594;</span></a>]]></description>
+				<content:encoded><![CDATA[<div class="pf-content"><p>A couple of months ago, Brian Okken asked me if I would be interested in reading his book, <em>Python Testing with pytest</em>. I have been interested in learning more about the pytest package for a while, so I agreed to take a look. I also liked that the publisher was The Pragmatic Programmers, which I&#8217;ve had good experience with in the past. We will start with a quick review and then dive into the play-by-play.</p>
+<hr />
+<h3>Quick Review</h3>
+<ul>
+<li><strong>Why I picked it up:</strong> The author of the book asked me to read his book</strong> </li>
+<li><strong>Why I finished it:</strong> I mostly skimmed the book to see how it was written and to check out the examples</strong> </li>
+<li><strong>I’d give it to:</strong> Anyone who is interested in testing in Python and especially in the pytest package </li>
+</ul>
+<p><span id="more-6841"></span></p>
+<hr />
+<h3>Book Formats</h3>
+<p>You can get this as a physical soft cover, Kindle on Amazon or various other eBook formats via Pragmatic Programming&#8217;s website.</p>
+<hr />
+<h3>Book Contents</h3>
+<p>This book has 7 chapters, 5 appendices and is 222 pages long.</p>
+<p><!--more--></p>
+<hr />
+<h3>Full Review</h3>
+<p>This book jumps right in by starting off with an example in chapter 1. I actually found this a bit jarring as usually chapters have an introduction at the beginning that goes over what the chapter will be about. But chapter one just jumps right in with an example of a test in Python. It&#8217;s not bad, just different. This chapter explains how to get started using pytest and covers some of the common command line options you can pass to pytest.</p>
+<p>Chapter two goes into writing test functions with pytest. It also talks about how pytest uses Python&#8217;s <strong>assert</strong> keyword rather than assert methods like Python&#8217;s <strong>unittest</strong> library does. I found that to be an appealing feature of pytest. You will also learn how to skip tests and how to mark tests that we expect will fail as well as a few other things.</p>
+<p>If you&#8217;ve wondered about fixtures in pytest, then you will be excited to know that this book has two chapters on the topic; specifically chapters three and four. These chapters cover a lot of material, so I will just mention the highlights. You will learn about creating fixtures for setup and teardown, how to trace fixture execution, fixture scope, parameterized fixtures and builtin fixtures. </p>
+<p>Chapter five is about how to add plugins to pytest. You will also learn how to write your own plugins, how to install them and how to test your plugins. You will also get a good foundation in how to use <em>conftest.py </em>in this chapter.</p>
+<p>In chapter six, we learn all about configuring pytest. The big topics covered in this chapter deal with pytest.ini, conftest.py and __init__.py as well as what you might use setup.cfg for. There are a lot of interesting topics in this chapter as well such as registering markers or changing test discovery locations. I encourage you to take a look at the book&#8217;s table of contents to learn more though!</p>
+<p>Finally in chapter 7 (the last chapter), we learn about using pytest with other testing tools. In this case, the book covers, pdb, coverage.py, mock, tox, Jenkins and even unittest.</p>
+<p>The rest of the book is a series of five appendices and an index. The appendices cover virtual environments, pip, a plugin sampler, packaging / distributing Python projects and xUnit fixtures. </p>
+<p>I thought this book was well written and stayed on topic well. The examples are short and to the point. I am looking forward to diving more deeply into the book when I want to use the pytest package for my own code. I would recommend this book to anyone who is interested in the pytest package.</p>
+<table>
+<tbody>
+<tr>
+<td><a href="http://amzn.to/2i9EGHq" target="_blank"><img src="http://www.blog.pythonlibrary.org/wp-content/uploads/2017/10/pytest_book_cover-250x300.jpg" alt="" width="250" height="300" class="aligncenter size-medium wp-image-6842" srcset="https://www.blog.pythonlibrary.org/wp-content/uploads/2017/10/pytest_book_cover-250x300.jpg 250w, https://www.blog.pythonlibrary.org/wp-content/uploads/2017/10/pytest_book_cover-768x922.jpg 768w, https://www.blog.pythonlibrary.org/wp-content/uploads/2017/10/pytest_book_cover-853x1024.jpg 853w" sizes="(max-width: 250px) 100vw, 250px" /></a></td>
+<td>
+<h3>Python Testing with pytest</h3>
+<p>by Brian Okken</p>
+<p><strong><a href="http://amzn.to/2i9EGHq" target="_blank">Amazon</a>, <a href="http://pythontesting.net/books/pytest/" target="_blank">Book Website</a></strong>
+</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3>Other Book Reviews</h3>
+<ul>
+<li><a href="http://www.blog.pythonlibrary.org/2016/06/15/book-review-modular-programming-with-python/" target="_blank">Module Programming with Python</a> by Erik Westra</li>
+<li><a href="http://www.blog.pythonlibrary.org/2015/12/11/book-review-python-playground-geeky-projects-for-the-curious-programmer/" target="_blank">Python Playground – Geeky Projects for the Curious Programmer</a> by Mahesh Venkitachalam</li>
+<li><a href="http://www.blog.pythonlibrary.org/2014/12/04/ebook-review-ipython-notebook-essentials/" target="_blank">IPython Notebook Essentials</a> by L. Felipe Martins</li>
+<li><a href="http://www.blog.pythonlibrary.org/2014/05/01/ebook-review-creating-apps-in-kivy/" target="_blank">Creating Apps in Kivy</a> by Dusty Phillips</li>
+<li>Kivy – <a href="http://www.blog.pythonlibrary.org/2013/12/17/ebook-review-kivy-interactive-applications-python/">Interactive Applications in Python</a> by Roberto Ulloa</li>
+<li><a href="http://www.blog.pythonlibrary.org/2013/11/08/ebook-review-instant-flask-web-development/" target="_blank">Instant Flask Web Development</a> by Ron DuPlain</li>
+<li><a href="http://www.blog.pythonlibrary.org/2013/04/19/ebook-review-real-python/" target="_blank">Real Python</a> by Fletcher Heisler</li>
+<li><a href="http://www.blog.pythonlibrary.org/2010/08/22/book-review-python-3-object-oriented-programming/">Python 3 Object Oriented Programming</a> by Dusty Phillips</li>
+</ul>
+</div><p><a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=https%3A%2F%2Fwww.blog.pythonlibrary.org%2F2017%2F11%2F14%2Fbook-review-python-testing-with-pytest%2F&amp;linkname=Book%20Review%3A%20Python%20Testing%20with%20pytest" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=https%3A%2F%2Fwww.blog.pythonlibrary.org%2F2017%2F11%2F14%2Fbook-review-python-testing-with-pytest%2F&amp;linkname=Book%20Review%3A%20Python%20Testing%20with%20pytest" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_google_plus" href="https://www.addtoany.com/add_to/google_plus?linkurl=https%3A%2F%2Fwww.blog.pythonlibrary.org%2F2017%2F11%2F14%2Fbook-review-python-testing-with-pytest%2F&amp;linkname=Book%20Review%3A%20Python%20Testing%20with%20pytest" title="Google+" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save" href="https://www.addtoany.com/share#url=https%3A%2F%2Fwww.blog.pythonlibrary.org%2F2017%2F11%2F14%2Fbook-review-python-testing-with-pytest%2F&amp;title=Book%20Review%3A%20Python%20Testing%20with%20pytest" data-a2a-url="https://www.blog.pythonlibrary.org/2017/11/14/book-review-python-testing-with-pytest/" data-a2a-title="Book Review: Python Testing with pytest"></a></p>]]></content:encoded>
+			<wfw:commentRss>https://www.blog.pythonlibrary.org/2017/11/14/book-review-python-testing-with-pytest/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+		<item>
+		<title>PyDev of the Week: Bert JW Regeer</title>
+		<link>https://www.blog.pythonlibrary.org/2017/11/13/pydev-of-the-week-bert-jw-regeer/</link>
+		<comments>https://www.blog.pythonlibrary.org/2017/11/13/pydev-of-the-week-bert-jw-regeer/#respond</comments>
+		<pubDate>Mon, 13 Nov 2017 13:30:17 +0000</pubDate>
+		<dc:creator><![CDATA[Mike]]></dc:creator>
+				<category><![CDATA[PyDevOfTheWeek]]></category>
+		<category><![CDATA[Python]]></category>
+
+		<guid isPermaLink="false">http://www.blog.pythonlibrary.org/?p=6725</guid>
+		<description><![CDATA[This week we welcome Bert JW Regeer as our PyDev of the Week! Bert is a core developer of the Pyramid web framework. You can check our his experience over on his website or go check out his Github profile to see what projects he&#8217;s been working on lately. Let&#8217;s take a few moments to &#8230; <a href="https://www.blog.pythonlibrary.org/2017/11/13/pydev-of-the-week-bert-jw-regeer/" class="more-link">Continue reading <span class="screen-reader-text">PyDev of the Week: Bert JW Regeer</span> <span class="meta-nav">&#8594;</span></a>]]></description>
+				<content:encoded><![CDATA[<div class="pf-content"><p>This week we welcome Bert JW Regeer as our PyDev of the Week! Bert is a core developer of the <a href="https://trypyramid.com/" rel="noopener" target="_blank">Pyramid web framework</a>. You can check our his experience over on his <a href="https://bertjwregeer.com/" rel="noopener" target="_blank">website</a> or go check out his <a href="https://github.com/bertjwregeer" rel="noopener" target="_blank">Github profile</a> to see what projects he&#8217;s been working on lately. Let&#8217;s take a few moments to get to know Bert better!<span id="more-6725"></span></p>
+<p><img src="http://www.blog.pythonlibrary.org/wp-content/uploads/2017/11/bert_regeer-235x300.jpg" alt="" width="235" height="300" class="aligncenter size-medium wp-image-6727" srcset="https://www.blog.pythonlibrary.org/wp-content/uploads/2017/11/bert_regeer-235x300.jpg 235w, https://www.blog.pythonlibrary.org/wp-content/uploads/2017/11/bert_regeer-768x981.jpg 768w, https://www.blog.pythonlibrary.org/wp-content/uploads/2017/11/bert_regeer-802x1024.jpg 802w" sizes="(max-width: 235px) 100vw, 235px" /></p>
+<p><strong>Can you tell us a little about yourself? (Hobbies, education, etc?):</strong></p>
+<p><em>Oh, I have no idea where to start, but let’s give it a shot. I am first and foremost a geek, I love electronics, which in and of itself is an expensive hobby. Always new toys to play with and buy. I studied Computer Science at the University of Advancing Technology, and have been known to spend a lot of time building cool hardware based projects too. Spent a lot of time on FIRST Robotics, first in HS and then mentoring HS students while in college. Lately the only hardware I get to play with though is home automation, installing new switches and sensors to make my laziness even more lazy!</p>
+<p>My other major hobbies all have something in common, they are expensive ones: photography and cars. I am a bit of an <a href="https://www.instagram.com/bertjwregeer/" rel="noopener" target="_blank">amateur photographer</a> and am always looking to get new lenses or find new ideas on how to shoot something new and exciting. My next goal is to do some astrophotography and I am looking to get a nice wide lens with a nice large aperture. I live in Colorado so there are plenty of gorgeous places to go photograph. I drive a Subaru WRX, and I absolutely love going for rides. Been eyeing some upgrades to my car, but so far she is still stock. I enjoy going out and driving around the mountains though, which goes hand in hand with the photography!</p>
+<p>Last but not least, lately I have gotten into making my own sourdough bread. There is nothing better than a freshly baked sourdough bread with a little butter. It’s my newest and most recent hobby, and it is also the one that costs almost nothing. I get to make healthier bread, share it with friends and family, and it costs pennies! I work at a small company named <a href="http://Crunch.io" rel="noopener" target="_blank">Crunch</a> and a few of my colleagues are bread bakers too, which allows us to share tips and ideas on how to improve our breads.</p>
+<p>I really should update my <a href="https://bertjwregeer.com" rel="noopener" target="_blank">website</a> to include this, but on a different note, you can find some of my older projects there!</em></p>
+<p><strong>Why did you start using Python?</strong></p>
+<p><em>I was introduced to Python while I was at university, at the time (2008 time frame) I didn’t really think much of it other than just a quick way to prototype some ideas before translating them into C/C++. At the time I was a pretty big proponent of C++, and working mostly in the backend it was a pretty natural fit. Write your applications in C++ and run on FreeBSD.</p>
+<p>It wasn’t until I was at my first programming job where we had to quickly write a new server component that I started reaching for Python first and foremost to deliver the project. After quickly prototyping I was able to prove that Python would provide us with the speed and throughput required while alleviating some of the development concerns we were worried about. As time went on there were still components I wrote in C++, but a large part of our service ended up being written in Python due to the speed of development.</p>
+<p>For personal use, I had always written my websites in PHP since it was always available and easy to use, but I never really did enjoy using any of the frameworks built for PHP. All of them were brand new at the time and felt incredibly heavy weight, and because I was using more Python at work it was getting confusing, when do I need to use tabs and when do I use curly braces? It always took me a minute or two to context switch from one programming language to another, so I started looking at Django, Flask, Pylons, Pyramid, Google App Engine and others. I ended up settling on Pyramid due to it’s simplicity and because it allowed me to pick the components I wanted to use. I ended becoming the maintainer for WebOb and recently have become a full core contributor to the Pylons Project.</em></p>
+<p><strong>What other programming languages do you know and which is your favorite?</strong></p>
+<p><em>This is going to be an incredibly long list, so let’s go with the ones I have extensively and not just used for a toy project here and there. As already mentioned I started out with C/C++, being the first language I learned from a C++ for Dummies book when I was 12, since then I’ve ran the gamut, but PHP was fairly big for me a for a while. In high school and university Java of course was used, although it still is my least favorite language, I have used it extensively on some Android projects. I’ve worked on a project that was Objective C, with a little bit of Swift, mainly doing a security audit so I am not sure it really counts as extensively… currently the two languages I use most are Python and JavaScript (or Typescript, transpiled to JavaScript). ES6/ES7 (yay for Babel) are heavily used in various projects.</p>
+<p>Python however has definitely become my favorite programming language. It is incredibly versatile and even though it is not the fastest language by far, it is one of the most flexible and I can appreciate how easy it makes my life. Are there things I’d like to see change in Python? Absolutely. Are there pieces missing? Sure. At the same time I am not sure what other language I would enjoy working in as much as I currently do with Python. I’ve tried Golang, it’s just not for me. Rust comes pretty close, but it feels too much like C/C++ and requires a lot more thinking than I think is necessary for the things I am working on.</em></p>
+<p><strong>What projects are you working on now?</strong></p>
+<p><em>Outside of work, just a bunch of open source currently. As I am writing this I am preparing a talk for PloneConf where I am going to talk about taking over maintenance of well loved projects, specifically WebOb which is a Python WSGI/HTTP request/response library that was written by Ian Bicking and is now maintained by the Pylons Project with me as lead.</p>
+<p>The Pylons Project is a collective of people that maintain a bunch of different pieces of software, mostly for the HTTP web. Pyramid the web framework, WebOb the WSGI/HTTP request/response library that underlies it, webtest for testing your WSGI applications, form generation, pure HTTP web server and more. We don’t have a lot of people, so there is a lot of work to be done. Releasing new versions of existing software, accepting/reviewing patches and reducing the issue count faster than the issues continue to be generated!</p>
+<p>There are also many unfinished projects, my Github is a venerable graveyard of projects that I’ve started and never finished. Great aspirations, just find that if I am doing things for myself once I have figured out the hard part, once I’ve solved “the problem”, completing a project is not nearly as much fun, so off I go to the next project. I always learn something new, just feel bad that it is mostly half-finished code that no-one else can really benefit from.</em></p>
+<p><strong>Which Python libraries are your favorite (core or 3rd party)</strong></p>
+<p><em>I believe it started as a third-party, but is now baked into every Python installation (unless you are on one of those special Linux distributions that rips it out and makes it a separate installable), and that is the virtual environment tool venv or virtualenv. It makes it much simpler to have different environments with different libraries installed. Being able to separate out all of my different projects and not have to install globally is a amazing! C/C++ make this much more difficult especially if you need to include linker flags and all kinds of fun stuff, and pkg-config and friends only get you so far. Similar systems exist for other languages, but it is by far my favorite part about working with Python.</em></p>
+<p><strong>Is there anything else you’d like to say?</strong></p>
+<p><em>We are always looking for new developers to join us in the <a href="https://pylonsproject.org" rel="noopener" target="_blank">Pylons Project</a>, if you are looking for someone to mentor you, please reach out and we will do our best. This year we had an absolutely fantastic <a href="https://github.com/whiteroses" rel="noopener" target="_blank">Google Summer of Code with Ira</a> and I’d be happy to help introduce more new people to not just the Pylons Project but to open source in general.</em></p>
+<p><strong>Thanks for doing the interview!</strong></p>
+</div><p><a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=https%3A%2F%2Fwww.blog.pythonlibrary.org%2F2017%2F11%2F13%2Fpydev-of-the-week-bert-jw-regeer%2F&amp;linkname=PyDev%20of%20the%20Week%3A%20Bert%20JW%20Regeer" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=https%3A%2F%2Fwww.blog.pythonlibrary.org%2F2017%2F11%2F13%2Fpydev-of-the-week-bert-jw-regeer%2F&amp;linkname=PyDev%20of%20the%20Week%3A%20Bert%20JW%20Regeer" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_google_plus" href="https://www.addtoany.com/add_to/google_plus?linkurl=https%3A%2F%2Fwww.blog.pythonlibrary.org%2F2017%2F11%2F13%2Fpydev-of-the-week-bert-jw-regeer%2F&amp;linkname=PyDev%20of%20the%20Week%3A%20Bert%20JW%20Regeer" title="Google+" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save" href="https://www.addtoany.com/share#url=https%3A%2F%2Fwww.blog.pythonlibrary.org%2F2017%2F11%2F13%2Fpydev-of-the-week-bert-jw-regeer%2F&amp;title=PyDev%20of%20the%20Week%3A%20Bert%20JW%20Regeer" data-a2a-url="https://www.blog.pythonlibrary.org/2017/11/13/pydev-of-the-week-bert-jw-regeer/" data-a2a-title="PyDev of the Week: Bert JW Regeer"></a></p>]]></content:encoded>
+			<wfw:commentRss>https://www.blog.pythonlibrary.org/2017/11/13/pydev-of-the-week-bert-jw-regeer/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>PyDev of the Week: Bruce Eckel</title>
+		<link>https://www.blog.pythonlibrary.org/2017/11/06/pydev-of-the-week-bruce-eckel/</link>
+		<comments>https://www.blog.pythonlibrary.org/2017/11/06/pydev-of-the-week-bruce-eckel/#comments</comments>
+		<pubDate>Mon, 06 Nov 2017 13:30:23 +0000</pubDate>
+		<dc:creator><![CDATA[Mike]]></dc:creator>
+				<category><![CDATA[PyDevOfTheWeek]]></category>
+		<category><![CDATA[Python]]></category>
+
+		<guid isPermaLink="false">http://www.blog.pythonlibrary.org/?p=6719</guid>
+		<description><![CDATA[This week we welcome Bruce Eckel as our PyDev of the Week! Bruce is the author of several books including Thinking in Java, Thinking in C++ and Thinking in Python among others. He also has a Programming Blog that is well worth a look. Let&#8217;s spend some time getting to know Bruce better! Can you &#8230; <a href="https://www.blog.pythonlibrary.org/2017/11/06/pydev-of-the-week-bruce-eckel/" class="more-link">Continue reading <span class="screen-reader-text">PyDev of the Week: Bruce Eckel</span> <span class="meta-nav">&#8594;</span></a>]]></description>
+				<content:encoded><![CDATA[<div class="pf-content"><p>This week we welcome Bruce Eckel as our PyDev of the Week! Bruce is the author of several books including Thinking in Java, Thinking in C++ and Thinking in Python among others. He also has a <a href="http://bruceeckel.github.io/" rel="noopener" target="_blank">Programming Blog</a> that is well worth a look. Let&#8217;s spend some time getting to know Bruce better!</p>
+<p><strong>Can you tell us a little about yourself (hobbies, education, etc):</strong></p>
+<p><em>My dad was my first employer. He built custom homes and had me do drudge work around the construction site. His head carpenter told me that it was &#8220;so I didn&#8217;t want to go into construction.&#8221;</p>
+<p>This was a very effective strategy. I went to multiple colleges for 8 years and ended up with a BS in Applied Physics and an MS in Computer Engineering. Mostly because the thought of getting a regular job sounded like prison.</p>
+<p>I chafed at the imposed structure of industrial-age management, and my goal became to escape from that world, which I did a few years later, becoming an independent writer, trainer and consultant. I&#8217;ve done that ever since. About ten years ago I started to revisit the whole idea of working for companies and have written fairly extensively about it in <a href="http://www.reinventing-business.com/" rel="noopener" target="_blank">ReinventingBusiness</a>. Briefly, I think we are on the cusp of a new age in work, and I&#8217;m struggling to help bring that about.</p>
+<p>I live in Crested Butte, Colorado, where I hold small conferences and other events. In the summer I mostly mountain bike, and in the winter I&#8217;ve recently switched from cross-country skiing to snow biking (I stopped downhill skiing after breaking my leg quite badly; I miss it but the risk/benefit just didn&#8217;t work anymore). I have played the lead in a number of theatre productions in our very small town, and I have been experimenting with abstract painting for a dozen years or so. Recently I&#8217;ve been helping out with a business accelerator project at the <a href="https://icelab.co/" rel="noopener" target="_blank">ICELab</a> in our nearby town of Gunnison. I&#8217;ve visited a number of incubators and accelerators during my travels but this is the first time I&#8217;ve seen one from inside.</p>
+<p>I&#8217;m also a bit of a workshop junkie. I&#8217;ve probably taken 50 workshops at Esalen by now, and others elsewhere. For me it&#8217;s a vacation &#8212; not only do you go to a different environment, but you have new things to keep your brain occupied so you don&#8217;t start thinking about what you are taking a vacation from.</p>
+<p>For the last couple of years, as part of my study of <a href="http://www.reinventing-business.com/search?q=Teal" rel="noopener" target="_blank">Teal</a> organizational structures, I have been working on a practice called <a href="http://amzn.to/2ycmkze" rel="noopener" target="_blank">Non-Violent Communication</a>, taking three week-long workshops and reading numerous books. This has been one of the many eye-opening experiences in my <a href="http://www.reinventing-business.com" rel="noopener" target="_blank">Reinventing Business</a> pursuits.</em><span id="more-6719"></span></p>
+<p><strong>Why did you start using Python?</strong></p>
+<p><em>This was sometime in the mid-90s. I had worked predominantly with statically-compiled languages up to that point. I was in Prague, teaching a seminar, when for some reason I started playing with Perl. It felt revolutionary; not just responsive, but also oriented towards making life easy for the programmer. Problem-solving rather than jumping through hoops.</p>
+<p>It might have been a couple of months later when I tried looking at some of my &#8220;older&#8221; Perl code and discovered I couldn&#8217;t understand it. That kind of broke Perl for me, as readability is something I consider essential. Shortly after that I discovered Python and have been hooked ever since.</p>
+<p>The first project I wrote was a code-extraction tool for my book &#8220;Thinking in C++.&#8221; This would extract the examples and create makefiles to compile them to test for syntax errors. I had written an earlier version in C++ and it took me two weeks. The rewrite in Python took a half-day (however, I understood the problem thoroughly so that gave me an advantage. Otherwise it might have taken a couple of days). Of course I expected it to run slower, Python being interpreted and all. But it ran faster! This was because C++ iostreams hadn&#8217;t had much optimization at the time, but it was one of many lessons about making performance assumptions. Now I just try doing it in Python without worrying about speed, and I can only remember a vanishingly small number of times when performance was an issue.</p>
+<p>Ever since, I have been trying to move into the Python world and pull the hole in after me, and I keep getting foiled. Any support tools I create are in Python, however, and I actively stay updated on the newest features in the language. Python just makes me happy, so I continue to try to live there.</em></p>
+<p><strong>What other programming languages do you know and which is your favorite?</strong></p>
+<p><em>I seem to specialize in languages. The ones I know best are the ones I&#8217;ve written books about.</p>
+<p>My first book was titled &#8220;Computer Interfacing with Pascal &#038; C.&#8221; That was Turbo Pascal and the interfacing was from Kaypros (a CP/M machine) and early MS-DOS PCs. Yeah, I&#8217;ve seen it all.</p>
+<p>I was a founding member of the ANSI/ISO C++ standards committee, from 89 or 90 to when the C++ 98 standard was published (the first one). I wrote several books on C++ and worked a long time with that language. I knew C++ 98 very well, having seen its development and spent time with lots of very smart people on the committee &#8212; this was much better than more graduate school would have been. However, the language has changed so much in more recent standards that I don&#8217;t know it at all. I basically haven&#8217;t touched C++ since the publication of &#8220;Thinking in C++, Volume 2.&#8221;</p>
+<p>The reason I moved away from C++ was Java, which I learned by writing &#8220;Thinking in Java.&#8221; Although Java moved us forward significantly by introducing the virtual machine and garbage collection (up until Java, these ideas had never seen practical use in a language), Java started life hobbled by poor language design decisions that have haunted it ever since. People fall in love with the language for various reasons &#8212; sometimes it&#8217;s the only language they ever learn &#8212; and so have a hard time noticing these flaws, having nothing to compare with. But I see a huge impact in programmer productivity and maintenance costs. Just because Java has advantages over C++ doesn&#8217;t make it great.</p>
+<p>Despite that, I finally got around to writing my final coverage of Java, called <a href="http://www.OnJava8.com" rel="noopener" target="_blank">On Java 8</a>. It took two years and is a comprehensive coverage of Java 8, more comprehensive, I think, than &#8220;Thinking in Java.&#8221;</p>
+<p>In the past few months I&#8217;ve been working on &#8220;Atomic Kotlin&#8221; with one of the Kotlin compiler team members, Svetlana Isakova. I&#8217;m very impressed with this language &#8212; it actually fixes the vast majority of the complaints I have with Java, something I never thought possible. Often, Kotlin even feels Pythonic, high praise indeed. I&#8217;m starting to think Kotlin will be the successor to Java, and that&#8217;s what we put on the book cover. We hope to finish the book in a few months; it will be available as an ebook first and then a print book. The site for the book is <a href="http://atomickotlin.com/" rel="noopener" target="_blank">here</a>; right now it just goes to the example repository as the book is still under development but that URL will become a site for the book when it&#8217;s ready.</p>
+<p>&#8220;Atomic Kotlin&#8221; was derived from the material in &#8220;Atomic Scala,&#8221; which I coauthored with Dianne Marsh who is now a director at Netflix. The &#8220;Atomic&#8221; idea is about the size of the chapters; we wanted to make them as small as possible, ideally covering only a single concept. This gives the reader an easier sense of accomplishment, but it also turns out to make it nicer to write. The book covers have mid-century atomic-age themes.</p>
+<p>Dianne and I spent several years struggling with &#8220;Atomic Scala.&#8221; I&#8217;d say we both have a good grasp of the language, but even after all that time, not a great grasp. Scala was an academic, experimental language and as a result contains the artifacts of those experiments. It is in active use for certain projects. Through its experiments, it has contributed greatly to computer science knowledge. However, it ultimately doesn&#8217;t fit my vision for a language &#8212; there are too many jagged edges for my taste.</p>
+<p>Kotlin learned from many other languages and incorporated features that were previously shown to be very beneficial in those other languages. Here&#8217;s a small, simple example: the original Java designers declared that operator overloading was &#8220;bad&#8221; because it was hard in C++ (which it was, but those Java designers just didn&#8217;t understand the issues or the landscape &#8212; Python had already demonstrated that operator overloading in the context of a garbage collector was easy). Scala added operator overloading along with an experiment that allowed people to make up new operators. This was a great experiment, and it compelled the Kotlin designers to follow the Python approach of (1) having a limited set of predefined operators and (2) overloading operators using text names so they were easy to search for. Kotlin is filled with examples of good design decisions like this.</p>
+<p>I coauthored &#8220;First Steps in Flex&#8221; with James Ward, who was a tech evangelist at Adobe at the time. Flex was quite a well-designed language, but Adobe pulled the plug on it shortly after the book came out. Eventually they made it open source but by then it had lost its following.</p>
+<p>I&#8217;ve had a couple of <a href="http://www.developer-retreat.com" rel="noopener" target="_blank">Developer Retreats</a> on the Elm language, which is a radical departure from Javascript but I think has the greatest potential of anything I&#8217;ve seen for front-end development. <a href="http://elm-lang.org/" rel="noopener" target="_blank">Elm</a> is a pure functional language based on Haskell which promises zero run-time errors and the fastest speed vs. any Javascript framework. I tend to be drawn to languages that try to leapfrog significantly over the problems of current, entrenched languages.</p>
+<p>Another language I&#8217;ve been studying lately is Go. My friend Luciano Ramalho convinced me to come to the Go conference in Denver; he came up to Crested Butte afterward and we held a <a href="http://bruceeckel.github.io/2017/07/19/gophercon-and-the-concurrent-python-developer-retreat/" rel="noopener" target="_blank">developer retreat on Python concurrency</a>. I&#8217;ve yet to write anything in Go but I&#8217;m quite interested in the design of the language and the design process. My greatest interest is in their concurrency model, and I&#8217;ve even heard that it&#8217;s possible that something modeled after goroutines may appear in Python 3.7 or 3.8, and that could revolutionize Python concurrency.</em></p>
+<p><strong>What projects are you working on now?</strong></p>
+<p><em></p>
+<ul>
+<li><a href="https://AtomicKotlin.com" rel="noopener" target="_blank">Atomic Kotlin</a>. This book is my primary occupation right now, as we&#8217;re trying to get it out in short order.</li>
+<li><a href="https://github.com/BruceEckel/ThinkingInPython" rel="noopener" target="_blank">Thinking in Python</a>. Although I had long ago given up on [Python 3 Patterns &#038; Idioms](https://bitbucket.org/BruceEckel/python-3-patterns-idioms) for reasons described on that site, I kept getting feedback about how useful people had found what was there. Someone said they&#8217;d be interested in helping and we ended up having a developer retreat around it. We made progress but it&#8217;s still in its early stages. I will probably spend time on this once the Kotlin book is done, to try to get it into working shape.</li>
+<li><a href="https://ConcurrentPython.com" rel="noopener" target="_blank">Concurrent Python</a>. This is the project where I think I might make a significant contribution to the Python community. It&#8217;s big, complex, and ambitious, and the landscape is evolving. Concurrency is a topic I&#8217;ve struggled with for decades so it feels like a valuable pursuit. It&#8217;s also an area I think will make interesting conferences, workshops and seminars.</li>
+<li>The upcoming <a href="http://wintertechforum.com/" rel="noopener" target="_blank">Winter Tech Forum</a>. This is a self-organizing open spaces conference that explores many different areas of technology. We also get outdoors and have many interactive activities. It started as the Java Posse Roundup and evolved into the WTF when the Java Posse stopped broadcasting.</li>
+<li>Refining the idea of the <a href="http://www.developer-retreat.com" rel="noopener" target="_blank">Developer Retreat</a> and doing more of them.</li>
+<li>My <a href="http://bruceeckel.github.io/" rel="noopener" target="_blank">Programming Blog</a>. This is where I talk about my technical explorations.</li>
+<li>[New Mindview Website](http://mindviewinc.com/Index.php). The old site could actually be thought of as an early form of a static site (using PHP to insert headers and footers and CSS for basic style elements), but with an amalgam of other technologies like Zope that have been accumulated over the years. I&#8217;ve finally started moving everything to static site generators (using Hugo) and it&#8217;s a huge relief because it makes the sites so much easier to build and maintain. There&#8217;s still a lot of work to do for conversion, though &#8212; this site has been accumulating for a long time.</li>
+<li>Starting a &#8220;Teal&#8221; organization that gets paid for developing open source. You can read about Teal organizations <a href="http://www.reinventing-business.com/search?q=Teal" rel="noopener" target="_blank">here</a>. I&#8217;ve slowly been forming ideas around what kind of Teal organization I&#8217;d be excited about, and paid open source is a nut I&#8217;d like to crack. I think it will revolutionize the world when software developers can work full-time on what they love, and everyone can use the results.</li>
+<li>I keep wanting to start some kind of podcast, but the format and process keeps eluding me. I want it to be the kind of podcast I personally find fascinating, with all the annoying bits taken out.</li>
+</ul>
+<p></em></p>
+<p><strong>Which Python libraries are your favorite (core or 3rd party)?</strong><br />
+<em><br />
+<a href="http://click.pocoo.org" rel="noopener" target="_blank">Click</a> for command-line applications. The more of Armin Ronacher&#8217;s work I see, the more impressed I am. I suspect he develops his documentation either in parallel with the library, or perhaps even first, and that&#8217;s what makes his designs so good &#8212; the process of documenting forces him to really think about what works. I build a lot of command-line tools, and projects usually end up as piles of tools. The moment I switch to a different project I start forgetting how to use that pile. I&#8217;ve been looking for years for a good way to organize that pile and to ease the whole command-line mess, and Click just does it right, in my opinion. I&#8217;m a big fan.</p>
+<p>Pathlib (part of the standard library). Creating command-line tools inevitably involves working with paths. I&#8217;ve been trying to imagine object-oriented paths for ages, and it&#8217;s always tricky to get the abstractions to work right. Pathlib is an example of very well-thought-out abstractions that solve a common problem in a way that really speeds up and simplifies my programming.</p>
+<p>Regular Expressions. I know the joke about having a problem, trying to solve it with regular expressions, now you&#8217;ve got two problems. I&#8217;ve been using regular expressions long enough to know how to severely limit myself in what I try to do &#8212; I do whatever I can achieve *simply* with regular expressions. If you just leverage them, without diving in headfirst and trying to solve everything using regular expressions, they become a remarkably powerful tool that greatly amplifies your programming. The trick is in understanding and achieving that balance. I always treat regular expression programming in an exploratory fashion: Let&#8217;s first do something very simple, get that working, then slowly expand until you get a solution.</p>
+<p>In the past, I&#8217;ve spent quite a bit of time with <a href="https://www.crummy.com/software/BeautifulSoup/" rel="noopener" target="_blank">Beautiful Soup</a>. I was writing books using Microsoft Word (to produce camera-ready pages with built-in table of contents and index generation), then converting them to HTML and processing that to produce an ebook (fortunately I no longer need to do that; I&#8217;ve switched to Pandoc Markdown, which isn&#8217;t perfect but does just enough). Beautiful Soup is an excellent example of the kind of messy problem Python is ideal for solving. Of course you could solve it in another language, but for some reason Python just adapts to messiness more easily.</em></p>
+<p><strong>How did you end up becoming an author of technical books?</strong></p>
+<p><em>Although I&#8217;ve always been drawn to writing (I spent my first year in college as a journalism major, before changing to physics), I saw it as a way to promote myself as a consultant and thus escape the fate of working as an employee. I began by writing magazine articles, back when there were magazines and they paid you for articles. My first book was made from a column I wrote for Micro Cornucopia magazine (long since gone). That was a lot easier and less-intimidating than starting a book from scratch, but once I had done that, other books became easier, and I just kept getting drawn into one book project after another. There were times when I fought it but I&#8217;ve come to terms with the idea that I will probably always be working on a book. It&#8217;s nice to have projects.</p>
+<p>Whether writing was a good strategy for being hired as a consultant is another question. I&#8217;ve had periodic consulting jobs over the years &#8212; it seems to ebb and flow. I had people think that I was somehow too famous and important; they wanted to hire me but assumed I would be too busy. So writing might have actually driven away more customers than it produced. A more direct approach might have made more sense, but it seems to be my nature to go at things circuitously.</em></p>
+<p><strong>What are the top three things you learned as an author/speaker?</strong><br />
+<em><br />
+1) It&#8217;s about the audience, it&#8217;s not about you. Your job is to serve the audience, and anything that doesn&#8217;t accomplish this should be cut. I&#8217;ve seen many authors fall headfirst into the delusion that the audience is somehow fascinated with them and their lifestyle, and include those things in their books or presentations. When writing, every unnecessary word is work for the reader, so you must do your best to remove those &#8212; learn about something called &#8220;active voice,&#8221; which makes your writing not just more immediate, but also shorter (it also requires endless dilligence and effort).</p>
+<p>There&#8217;s a fine line &#8212; occasionally some personal anecdote or observation or opinion <strong>will</strong> produce illumination for the reader or listener. And a big part of live presentations is the amount of energy you bring. But it all needs to feed back into the goal of moving the audience forward.</p>
+<p>2) If you&#8217;re going to travel, stay longer and make it an adventure. Especially when I travel internationally, I want to have experiences that give me a sense of the place I&#8217;m going to. Because I require business-class flights for international travel, and those are expensive, I don&#8217;t usually ask for a speaking stipend in those cases. I do ask for my hosts to arrange other activities for me; these are usually things like speaking to local user groups and visits to companies and incubators etc., which I enjoy and learn from but also tend to benefit the conference in various ways. My hosts usually show me around and take me to meals as well, so the whole experience feels more like a vacation than work.</p>
+<p>3) You must discover what motivates you to write and/or speak. I often get questions from people who want to write, or think they want to write. I usually find there is some underlying motivation, a thing that someone <strong>thinks</strong> writing will get them. Sometimes writing might be the path to that thing, but if you reveal it early you might find a path that&#8217;s a better fit for you. A good resource is Simon Sinek&#8217;s <a href="https://startwithwhy.com/" rel="noopener" target="_blank">Start WithWhy</a>, which helps discover your underlying motivation.</p>
+<p>As far as the writing process itself, you&#8217;ll find lots of people stridently declaring that you must create a rigid schedule and write every single day, never let up on yourself, be tough, things like that. A very dominating view of the writing process that fits with our Western hierarchical mindset. What I find interesting is that I don&#8217;t usually find the writing that comes out of such a process to be particularly interesting or compelling. Almost as if by making writing into work, it sucks the life out of it and turns it into work for the reader.</p>
+<p>If I&#8217;m not inspired to write, I don&#8217;t think I do very good work. But it doesn&#8217;t matter, because without inspiration I don&#8217;t want to do it. Sometimes the inspiration is trying to unravel a particularly thorny problem, sometimes it&#8217;s just that it makes me feel good to be productive. I think there are many writers who work when they&#8217;re inspired &#8212; but they don&#8217;t waste time declaring that this is the &#8220;right&#8221; way to write, or laying out a rigid set of rules about how to do it. The result is a kind of survivorship bias, where the only advice you hear is about the domination process for writing.</em></p>
+<p><strong>Is there anything else you’d like to say?</strong><br />
+<em><br />
+Regarding consulting: I would like to do more of it, but I&#8217;ve come to realize how tricky it is to find the right match between consultant and customer. There are a large number of activities that people throw into the &#8220;consulting&#8221; bin, from glorified temp workers to high-level advice (often so high-level that it can&#8217;t be effectively used). I&#8217;m in what I like to think of as the &#8220;practical-advice-and-helping&#8221; category. Contrast this with fly-by consulting, where you come in, say the team or company is doing everything wrong and should instead be doing it my way, and fly away. Instead, it requires understanding where a group is and what kind of changes they are ready for/capable of. Often these changes are much smaller and less dramatic than the kind of thing a fly-by promises, but they can produce actual improvements and benefit.</p>
+<p>I&#8217;ve always charged a significant fee, to compensate for the difficulties and stresses of travel and thinking on your feet. But what if work were a joyful experience? If a company was strained by the fee, I&#8217;d happily charge less and give up the higher-paying, more stressful jobs, in order to work in that rarified, joyful atmosphere. The puzzle has always been how to even find such organizations.</em></p>
+<p><strong>Thanks for doing the interview!</strong></p>
+</div><p><a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=https%3A%2F%2Fwww.blog.pythonlibrary.org%2F2017%2F11%2F06%2Fpydev-of-the-week-bruce-eckel%2F&amp;linkname=PyDev%20of%20the%20Week%3A%20Bruce%20Eckel" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=https%3A%2F%2Fwww.blog.pythonlibrary.org%2F2017%2F11%2F06%2Fpydev-of-the-week-bruce-eckel%2F&amp;linkname=PyDev%20of%20the%20Week%3A%20Bruce%20Eckel" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_google_plus" href="https://www.addtoany.com/add_to/google_plus?linkurl=https%3A%2F%2Fwww.blog.pythonlibrary.org%2F2017%2F11%2F06%2Fpydev-of-the-week-bruce-eckel%2F&amp;linkname=PyDev%20of%20the%20Week%3A%20Bruce%20Eckel" title="Google+" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save" href="https://www.addtoany.com/share#url=https%3A%2F%2Fwww.blog.pythonlibrary.org%2F2017%2F11%2F06%2Fpydev-of-the-week-bruce-eckel%2F&amp;title=PyDev%20of%20the%20Week%3A%20Bruce%20Eckel" data-a2a-url="https://www.blog.pythonlibrary.org/2017/11/06/pydev-of-the-week-bruce-eckel/" data-a2a-title="PyDev of the Week: Bruce Eckel"></a></p>]]></content:encoded>
+			<wfw:commentRss>https://www.blog.pythonlibrary.org/2017/11/06/pydev-of-the-week-bruce-eckel/feed/</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+		</item>
+		<item>
+		<title>Python 3: Variable Annotations</title>
+		<link>https://www.blog.pythonlibrary.org/2017/10/31/python-3-variable-annotations/</link>
+		<comments>https://www.blog.pythonlibrary.org/2017/10/31/python-3-variable-annotations/#comments</comments>
+		<pubDate>Tue, 31 Oct 2017 17:15:18 +0000</pubDate>
+		<dc:creator><![CDATA[Mike]]></dc:creator>
+				<category><![CDATA[Python]]></category>
+
+		<guid isPermaLink="false">http://www.blog.pythonlibrary.org/?p=6844</guid>
+		<description><![CDATA[Python added syntax for what something called Variable Annotation in the version 3.6. Variable Annotation is basically an enhancement of type hinting, which was introduced in Python 3.5. The full explanation behind Variable Annotation is explained in PEP 526. In this article, we will have a quick refresher on type hinting and then introduce the &#8230; <a href="https://www.blog.pythonlibrary.org/2017/10/31/python-3-variable-annotations/" class="more-link">Continue reading <span class="screen-reader-text">Python 3: Variable Annotations</span> <span class="meta-nav">&#8594;</span></a>]]></description>
+				<content:encoded><![CDATA[<div class="pf-content"><p>Python added syntax for what something called <strong>Variable Annotation</strong> in the version 3.6. Variable Annotation is basically an enhancement of type hinting, which was introduced in Python 3.5. The full explanation behind Variable Annotation is explained in <a href="https://www.python.org/dev/peps/pep-0526" rel="noopener" target="_blank">PEP 526</a>. In this article, we will have a quick refresher on type hinting and then introduce the new Variable Annotation syntax.</p>
+<h3>What&#8217;s Type Hinting?</h3>
+<p>Type hinting in Python is basically declaring that the parameters in your functions and methods have a certain type. Python does not enforce the type &#8220;hints&#8221;, but you can use tools like <a href="http://mypy-lang.org/" rel="noopener" target="_blank">mypy</a> to enforce the type hints in much the same way that C++ enforces type declarations at run time. Let&#8217;s look at a normal function with no type hints added:</p>
+<pre class="python"><span style="color: #ff7700;font-weight:bold;">def</span> add<span style="color: black;">&#40;</span>a, b<span style="color: black;">&#41;</span>:
+    <span style="color: #ff7700;font-weight:bold;">return</span> a + b
+&nbsp;
+<span style="color: #ff7700;font-weight:bold;">if</span> __name__ == <span style="color: #483d8b;">'__main__'</span>:
+    add<span style="color: black;">&#40;</span><span style="color: #ff4500;">2</span>, <span style="color: #ff4500;">4</span><span style="color: black;">&#41;</span></pre>
+<p><span id="more-6844"></span></p>
+<p>Here we create an <strong>add()</strong> function that takes two parameters. It adds the two parameters and returns the result. What we don&#8217;t know is what we need to pass to the function. We could pass it integers, floats, lists, or strings and it would most likely work. But would it work the way we expected it to? Let&#8217;s add some type hinting to our code:</p>
+<pre class="python"><span style="color: #ff7700;font-weight:bold;">def</span> add<span style="color: black;">&#40;</span>a: <span style="color: #008000;">int</span>, b: <span style="color: #008000;">int</span><span style="color: black;">&#41;</span> -<span style="color: #66cc66;">&gt;</span> <span style="color: #008000;">int</span>:
+    <span style="color: #ff7700;font-weight:bold;">return</span> a + b
+&nbsp;
+<span style="color: #ff7700;font-weight:bold;">if</span> __name__ == <span style="color: #483d8b;">'__main__'</span>:
+    <span style="color: #ff7700;font-weight:bold;">print</span><span style="color: black;">&#40;</span>add<span style="color: black;">&#40;</span><span style="color: #ff4500;">2</span>, <span style="color: #ff4500;">4</span><span style="color: black;">&#41;</span><span style="color: black;">&#41;</span></pre>
+<p>Here we change the definition of the function to utilize type hinting. You will notice that now the parameters are marked with what type they should be:</p>
+<ul>
+<li>a: int</li>
+<li>b: int</li>
+</ul>
+<p>We also hint at the return value, which is what the &#8220;-> int&#8221; is. That means we expect an integer as our return value. If you try calling the add() function with a couple of strings or a float and an integer though, you won&#8217;t see an error. As I said, Python just allows you to hint at what the type of the parameters should be, but it does not enforce it. </p>
+<p>Let&#8217;s update the code to the following:</p>
+<pre class="python"><span style="color: #ff7700;font-weight:bold;">def</span> add<span style="color: black;">&#40;</span>a: <span style="color: #008000;">int</span>, b: <span style="color: #008000;">int</span><span style="color: black;">&#41;</span> -<span style="color: #66cc66;">&gt;</span> <span style="color: #008000;">int</span>:
+    <span style="color: #ff7700;font-weight:bold;">return</span> a + b
+&nbsp;
+<span style="color: #ff7700;font-weight:bold;">if</span> __name__ == <span style="color: #483d8b;">'__main__'</span>:
+    <span style="color: #ff7700;font-weight:bold;">print</span><span style="color: black;">&#40;</span>add<span style="color: black;">&#40;</span><span style="color: #ff4500;">5.0</span>, <span style="color: #ff4500;">4</span><span style="color: black;">&#41;</span><span style="color: black;">&#41;</span></pre>
+<p>If you run this, you will see it executes just fine. Now let&#8217;s install mypy using pip:</p>
+<pre class="python">pip install mypy</pre>
+<p>Now that we have mypy, we can use it to determine if we are using our function correctly. Open up a terminal and navigate to the folder that you save the above script to. Then execute the following command:</p>
+<pre class="python">mypy hints.<span style="color: black;">py</span></pre>
+<p>When I ran this command, I received the following output:</p>
+<pre class="python">hints.<span style="color: black;">py</span>:<span style="color: #ff4500;">5</span>: error: Argument <span style="color: #ff4500;">1</span> to <span style="color: #483d8b;">&quot;add&quot;</span> has incompatible <span style="color: #008000;">type</span> <span style="color: #483d8b;">&quot;float&quot;</span><span style="color: #66cc66;">;</span> expected <span style="color: #483d8b;">&quot;int&quot;</span></pre>
+<p>As you can see, mypy found a problem with our code. We are passing in a float for the first argument instead of an int. You can use mypy on a continuous integration server that can check your code for these kinds of issues before committing pushing your submission to your branch or run it locally before committing your code at all.</p>
+<hr/>
+<h3>Variable Annotation</h3>
+<p>Let&#8217;s say you want to not just annotate function parameters but also regular variables. In Python 3.5, you couldn&#8217;t do this using the same kind of syntax as you would for function parameters as it would raise a <strong>SyntaxError</strong>. Instead you would need to use comments, but now that 3.6 is out, we can use the new syntax! Let&#8217;s look at an example:</p>
+<pre class="python"><span style="color: #ff7700;font-weight:bold;">from</span> typing <span style="color: #ff7700;font-weight:bold;">import</span> List
+&nbsp;
+<span style="color: #ff7700;font-weight:bold;">def</span> odd_numbers<span style="color: black;">&#40;</span>numbers: List<span style="color: black;">&#41;</span> -<span style="color: #66cc66;">&gt;</span> List:
+    odd: List<span style="color: black;">&#91;</span><span style="color: #008000;">int</span><span style="color: black;">&#93;</span> = <span style="color: black;">&#91;</span><span style="color: black;">&#93;</span>
+    <span style="color: #ff7700;font-weight:bold;">for</span> number <span style="color: #ff7700;font-weight:bold;">in</span> numbers:
+        <span style="color: #ff7700;font-weight:bold;">if</span> number <span style="color: #66cc66;">%</span> <span style="color: #ff4500;">2</span>:
+            odd.<span style="color: black;">append</span><span style="color: black;">&#40;</span>number<span style="color: black;">&#41;</span>
+&nbsp;
+    <span style="color: #ff7700;font-weight:bold;">return</span> odd
+&nbsp;
+<span style="color: #ff7700;font-weight:bold;">if</span> __name__ == <span style="color: #483d8b;">'__main__'</span>:
+    numbers = <span style="color: #008000;">list</span><span style="color: black;">&#40;</span><span style="color: #008000;">range</span><span style="color: black;">&#40;</span><span style="color: #ff4500;">10</span><span style="color: black;">&#41;</span><span style="color: black;">&#41;</span>
+    <span style="color: #ff7700;font-weight:bold;">print</span><span style="color: black;">&#40;</span>odd_numbers<span style="color: black;">&#40;</span>numbers<span style="color: black;">&#41;</span><span style="color: black;">&#41;</span></pre>
+<p>Here he specify that the variable, <strong>odd</strong>, should be a list of integers. If you run mypy against this script, you will receive no output as we are doing everything correctly. Let&#8217;s try changing the code to add something other than an integer though!</p>
+<pre class="python"><span style="color: #ff7700;font-weight:bold;">from</span> typing <span style="color: #ff7700;font-weight:bold;">import</span> List
+&nbsp;
+<span style="color: #ff7700;font-weight:bold;">def</span> odd_numbers<span style="color: black;">&#40;</span>numbers: List<span style="color: black;">&#41;</span> -<span style="color: #66cc66;">&gt;</span> List:
+    odd: List<span style="color: black;">&#91;</span><span style="color: #008000;">int</span><span style="color: black;">&#93;</span> = <span style="color: black;">&#91;</span><span style="color: black;">&#93;</span>
+    <span style="color: #ff7700;font-weight:bold;">for</span> number <span style="color: #ff7700;font-weight:bold;">in</span> numbers:
+        <span style="color: #ff7700;font-weight:bold;">if</span> number <span style="color: #66cc66;">%</span> <span style="color: #ff4500;">2</span>:
+            odd.<span style="color: black;">append</span><span style="color: black;">&#40;</span>number<span style="color: black;">&#41;</span>
+&nbsp;
+    odd.<span style="color: black;">append</span><span style="color: black;">&#40;</span><span style="color: #483d8b;">'foo'</span><span style="color: black;">&#41;</span>
+&nbsp;
+    <span style="color: #ff7700;font-weight:bold;">return</span> odd
+&nbsp;
+<span style="color: #ff7700;font-weight:bold;">if</span> __name__ == <span style="color: #483d8b;">'__main__'</span>:
+    numbers = <span style="color: #008000;">list</span><span style="color: black;">&#40;</span><span style="color: #008000;">range</span><span style="color: black;">&#40;</span><span style="color: #ff4500;">10</span><span style="color: black;">&#41;</span><span style="color: black;">&#41;</span>
+    <span style="color: #ff7700;font-weight:bold;">print</span><span style="color: black;">&#40;</span>odd_numbers<span style="color: black;">&#40;</span>numbers<span style="color: black;">&#41;</span><span style="color: black;">&#41;</span></pre>
+<p>Here we add a new line that appends a string to the list of integers. Now if we run mypy against this version of the the code we should see the following:</p>
+<pre class="python">hints2.<span style="color: black;">py</span>:<span style="color: #ff4500;">9</span>: error: Argument <span style="color: #ff4500;">1</span> to <span style="color: #483d8b;">&quot;append&quot;</span> of <span style="color: #483d8b;">&quot;list&quot;</span> has incompatible <span style="color: #008000;">type</span> <span style="color: #483d8b;">&quot;str&quot;</span><span style="color: #66cc66;">;</span> expected <span style="color: #483d8b;">&quot;int&quot;</span></pre>
+<p>Just to reiterate, in Python 3.5 you could do variable annotation, but you had to put that annotation in a comment:</p>
+<pre class="python"><span style="color: #808080; font-style: italic;"># Python 3.6</span>
+odd: List<span style="color: black;">&#91;</span><span style="color: #008000;">int</span><span style="color: black;">&#93;</span> = <span style="color: black;">&#91;</span><span style="color: black;">&#93;</span>
+&nbsp;
+<span style="color: #808080; font-style: italic;"># Python 3.5</span>
+odd = <span style="color: black;">&#91;</span><span style="color: black;">&#93;</span> <span style="color: #808080; font-style: italic;"># type: List[int]</span></pre>
+<p>Note that if you change the code to use the Python 3.5 variation of variable annotation syntax, mypy will still flag the error correctly. You have to specify the &#8220;type:&#8221; after the pound sign though. If you remove that, then it&#8217;s no longer variable annotation. Basically all <strong>PEP 526</strong> added was making the syntax more uniform across the language.</p>
+<hr/>
+<h3>Wrapping Up</h3>
+<p>At this point you should have enough information to start doing variable annotation in your own code whether you&#8217;re using Python 3.5 or 3.6 I think it&#8217;s a neat concept and will be especially useful to those programmers that work with others that are more familiar with a static typed language.</p>
+<hr/>
+<h3>Related Reading</h3>
+<ul>
+<li>Python 3: <a href="https://www.blog.pythonlibrary.org/2016/01/19/python-3-an-intro-to-type-hinting/" rel="noopener" target="_blank">An Intro to Type Hinting</a></li>
+<li>PEP 526 &#8212; <a href="https://www.python.org/dev/peps/pep-0526/" rel="noopener" target="_blank">Syntax for Variable Annotations</a></li>
+</ul>
+</div><p><a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=https%3A%2F%2Fwww.blog.pythonlibrary.org%2F2017%2F10%2F31%2Fpython-3-variable-annotations%2F&amp;linkname=Python%203%3A%20Variable%20Annotations" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=https%3A%2F%2Fwww.blog.pythonlibrary.org%2F2017%2F10%2F31%2Fpython-3-variable-annotations%2F&amp;linkname=Python%203%3A%20Variable%20Annotations" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_google_plus" href="https://www.addtoany.com/add_to/google_plus?linkurl=https%3A%2F%2Fwww.blog.pythonlibrary.org%2F2017%2F10%2F31%2Fpython-3-variable-annotations%2F&amp;linkname=Python%203%3A%20Variable%20Annotations" title="Google+" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save" href="https://www.addtoany.com/share#url=https%3A%2F%2Fwww.blog.pythonlibrary.org%2F2017%2F10%2F31%2Fpython-3-variable-annotations%2F&amp;title=Python%203%3A%20Variable%20Annotations" data-a2a-url="https://www.blog.pythonlibrary.org/2017/10/31/python-3-variable-annotations/" data-a2a-title="Python 3: Variable Annotations"></a></p>]]></content:encoded>
+			<wfw:commentRss>https://www.blog.pythonlibrary.org/2017/10/31/python-3-variable-annotations/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+		<item>
+		<title>Educative Python 101 / 201 Courses on Sale</title>
+		<link>https://www.blog.pythonlibrary.org/2017/10/30/educative-python-101-201-courses-on-sale/</link>
+		<comments>https://www.blog.pythonlibrary.org/2017/10/30/educative-python-101-201-courses-on-sale/#respond</comments>
+		<pubDate>Mon, 30 Oct 2017 12:55:02 +0000</pubDate>
+		<dc:creator><![CDATA[Mike]]></dc:creator>
+				<category><![CDATA[Books]]></category>
+		<category><![CDATA[Python 3]]></category>
+		<category><![CDATA[Python]]></category>
+
+		<guid isPermaLink="false">http://www.blog.pythonlibrary.org/?p=6836</guid>
+		<description><![CDATA[It&#8217;s that time of year again where the holidays are upon us, so I am doing a sale of some of my works. You can get Python 101 for FREE and Python 201: Intermediate Python for 50% off. Here are the coupon codes you can use: For Python 101 &#8211; au-py101-free For Python 201 &#8211; &#8230; <a href="https://www.blog.pythonlibrary.org/2017/10/30/educative-python-101-201-courses-on-sale/" class="more-link">Continue reading <span class="screen-reader-text">Educative Python 101 / 201 Courses on Sale</span> <span class="meta-nav">&#8594;</span></a>]]></description>
+				<content:encoded><![CDATA[<div class="pf-content"><p>It&#8217;s that time of year again where the holidays are upon us, so I am doing a sale of some of my works. You can get <a href="https://www.educative.io/collection/5663684521099264/5707702298738688" target="_blank" rel="noopener noreferrer">Python 101</a> for FREE and <a href="https://www.educative.io/collection/5663684521099264/5693417237512192" target="_blank" rel="noopener noreferrer">Python 201: Intermediate Python</a> for 50% off. Here are the coupon codes you can use:</p>
+<ul>
+<li>For <a href="https://www.educative.io/collection/5663684521099264/5707702298738688" target="_blank" rel="noopener noreferrer">Python 101</a> &#8211; <strong>au-py101-free</strong></li>
+<li>For<a href="https://www.educative.io/collection/5663684521099264/5693417237512192"> Python 201</a> &#8211; <strong>au-py201-50</strong></li>
+</ul>
+<p>Note that Python 101 is completely FREE with this coupon while the second course is 50% off. You can also get Python 101&#8217;s eBook for free over on <a href="https://leanpub.com/python_101/" rel="noopener" target="_blank">Leanpub</a>. You can also get the eBook for Python 201 for 50% off by using this link: <a href="http://leanpub.com/python201/c/py201free" rel="noopener" target="_blank">http://leanpub.com/python201/c/py201free</a></p>
+<p>All these coupons are good for one week. Thanks for your support!</p>
+</div><p><a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=https%3A%2F%2Fwww.blog.pythonlibrary.org%2F2017%2F10%2F30%2Feducative-python-101-201-courses-on-sale%2F&amp;linkname=Educative%20Python%20101%20%2F%20201%20Courses%20on%20Sale" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=https%3A%2F%2Fwww.blog.pythonlibrary.org%2F2017%2F10%2F30%2Feducative-python-101-201-courses-on-sale%2F&amp;linkname=Educative%20Python%20101%20%2F%20201%20Courses%20on%20Sale" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_google_plus" href="https://www.addtoany.com/add_to/google_plus?linkurl=https%3A%2F%2Fwww.blog.pythonlibrary.org%2F2017%2F10%2F30%2Feducative-python-101-201-courses-on-sale%2F&amp;linkname=Educative%20Python%20101%20%2F%20201%20Courses%20on%20Sale" title="Google+" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save" href="https://www.addtoany.com/share#url=https%3A%2F%2Fwww.blog.pythonlibrary.org%2F2017%2F10%2F30%2Feducative-python-101-201-courses-on-sale%2F&amp;title=Educative%20Python%20101%20%2F%20201%20Courses%20on%20Sale" data-a2a-url="https://www.blog.pythonlibrary.org/2017/10/30/educative-python-101-201-courses-on-sale/" data-a2a-title="Educative Python 101 / 201 Courses on Sale"></a></p>]]></content:encoded>
+			<wfw:commentRss>https://www.blog.pythonlibrary.org/2017/10/30/educative-python-101-201-courses-on-sale/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>PyDev of the Week: Matthew Makai</title>
+		<link>https://www.blog.pythonlibrary.org/2017/10/30/pydev-of-the-week-matthew-makai/</link>
+		<comments>https://www.blog.pythonlibrary.org/2017/10/30/pydev-of-the-week-matthew-makai/#comments</comments>
+		<pubDate>Mon, 30 Oct 2017 12:30:12 +0000</pubDate>
+		<dc:creator><![CDATA[Mike]]></dc:creator>
+				<category><![CDATA[PyDevOfTheWeek]]></category>
+		<category><![CDATA[Python]]></category>
+
+		<guid isPermaLink="false">http://www.blog.pythonlibrary.org/?p=6712</guid>
+		<description><![CDATA[This week we welcome Matthew Makai as our PyDev of the Week! Matthew is the creator of Full Stack Python and he also works with Michael Kennedy on his Python for Entrepreneurs video course.  You might also want to check out what he&#8217;s been up to over on Github. Let&#8217;s take a few minutes to &#8230; <a href="https://www.blog.pythonlibrary.org/2017/10/30/pydev-of-the-week-matthew-makai/" class="more-link">Continue reading <span class="screen-reader-text">PyDev of the Week: Matthew Makai</span> <span class="meta-nav">&#8594;</span></a>]]></description>
+				<content:encoded><![CDATA[<div class="pf-content"><p dir="ltr">This week we welcome Matthew Makai as our PyDev of the Week! Matthew is the creator of <a href="https://www.fullstackpython.com/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://www.fullstackpython.com/&amp;source=gmail&amp;ust=1507728304187000&amp;usg=AFQjCNHkxB8zlx14JpNd7tiDvuxudsvCJQ">Full Stack Python</a> and he also works with Michael Kennedy on his <a href="https://www.kickstarter.com/projects/mikeckennedy/python-for-entrepreneurs-video-course">Python for Entrepreneurs video course</a>.  You might also want to check out what he&#8217;s been up to over on <a href="https://github.com/mattmakai">Github</a>. Let&#8217;s take a few minutes to get to know him better!<span id="more-6712"></span></p>
+<p dir="ltr"><b>Can you tell us a little about yourself (hobbies, education, etc):</b></p>
+<p dir="ltr"><img class="aligncenter size-medium wp-image-6732" src="http://www.blog.pythonlibrary.org/wp-content/uploads/2017/10/matthew_makai-251x300.jpg" alt="" width="251" height="300" srcset="https://www.blog.pythonlibrary.org/wp-content/uploads/2017/10/matthew_makai-251x300.jpg 251w, https://www.blog.pythonlibrary.org/wp-content/uploads/2017/10/matthew_makai-768x920.jpg 768w, https://www.blog.pythonlibrary.org/wp-content/uploads/2017/10/matthew_makai.jpg 795w" sizes="(max-width: 251px) 100vw, 251px" /></p>
+<p><em>My name&#8217;s <a href="https://github.com/mattmakai/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://github.com/mattmakai/&amp;source=gmail&amp;ust=1507728304187000&amp;usg=AFQjCNGZhvi23i4ZubrmWw3CgVB_4Xe5nQ">Matt Makai</a> and I&#8217;m the creator of <a href="https://www.fullstackpython.com/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://www.fullstackpython.com/&amp;source=gmail&amp;ust=1507728304187000&amp;usg=AFQjCNHkxB8zlx14JpNd7tiDvuxudsvCJQ">Full Stack Python</a> as well as a software developer currently working for <a href="https://www.twilio.com/blog/2014/02/introducing-developer-evangelist-matt-makai.html" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://www.twilio.com/blog/2014/02/introducing-developer-evangelist-matt-makai.html&amp;source=gmail&amp;ust=1507728304187000&amp;usg=AFQjCNEBfaWaSD8DDK-B62N5LfFZ2z1xGw">Twilio</a>. My wife and I live in Washington, D.C., although we just moved to D.C. from San Francisco a few months ago.</em></p>
+<p><em>My education ran through the Virginia-based public university system: <a href="http://www.jmu.edu/cs/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=http://www.jmu.edu/cs/&amp;source=gmail&amp;ust=1507728304187000&amp;usg=AFQjCNFp5VfVIsLocfU8XUKbHLNe4zCN3g">James Madison University</a> B.S. in Computer Science, <a href="https://www.cs.vt.edu/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://www.cs.vt.edu/&amp;source=gmail&amp;ust=1507728304187000&amp;usg=AFQjCNFNexHZt5fV1Wz107R8HAcqGBw_Cw">Virginia Tech</a> Master&#8217;s in Computer Science and then <a href="https://www.commerce.virginia.edu/ms-mit" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://www.commerce.virginia.edu/ms-mit&amp;source=gmail&amp;ust=1507728304187000&amp;usg=AFQjCNFd3IWpBHFxRA4HkkuWOvsgGl952g">University of Virginia</a> for a second Master&#8217;s degree in Management of Information Technology (essentially an MBA applied to software). </em></p>
+<p><em>Computer science and programming are my main pas</em><em>sions, but I earned the business degree so I&#8217;d be able to hold my own in discussions on marketing, finance, corporate strategy, etc. UVA&#8217;s program was a really enjoyable curriculum for becoming a more well-rounded software developer.</em></p>
+<p>&nbsp;</p>
+<p dir="ltr"><b>Why did you start using Python?</b></p>
+<p><em>It&#8217;s now been 10 years of loving to code in the Python ecosystem for me! Back in 2007 I was a Java developer by day but would hack on Python side projects at night. Over time I found I was getting more built in a couple hours at night using Python than in a full work day working in Java land. </em></p>
+<p><em>A big &#8220;thank you&#8221; to the fine folks working on the <a href="https://www.djangoproject.com/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://www.djangoproject.com/&amp;source=gmail&amp;ust=1507728304187000&amp;usg=AFQjCNGFXFa7plCM1iPzU6osXqsKXfPCDg">Django web framework</a> for the <a href="https://docs.djangoproject.com/en/dev/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://docs.djangoproject.com/en/dev/&amp;source=gmail&amp;ust=1507728304187000&amp;usg=AFQjCNHQN2NY4auW6OSbwZiKCZPbZJSvJQ">amazing documentation</a> that allowed me to teach myself Python development and move into working with Python full-time.</em></p>
+<p>&nbsp;</p>
+<p dir="ltr"><b>What other programming languages do you know and which is your favorite?</b></p>
+<p><em>I have some experience with Swift for iOS development. My Java is a bit rusty but it&#8217;s been fun working with some of the new Java 8 features in the Spark framework, which <a href="https://www.twilio.com/blog/2017/03/dial-answer-phone-calls-spark-java-8-intellij.html" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://www.twilio.com/blog/2017/03/dial-answer-phone-calls-spark-java-8-intellij.html&amp;source=gmail&amp;ust=1507728304187000&amp;usg=AFQjCNF3WdV8_9cm2WtAxgAznla4TUfXIg">I used to write a fun tutorial earlier this year</a>. Python is by far my favorite language but setting that aside Swift has a lot of potential.</em></p>
+<p><span class="im"> </span></p>
+<p dir="ltr"><b>What projects are you working on now?</b></p>
+<p><em>My primary side project since 2012 has been <a href="https://www.fullstackpython.com/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://www.fullstackpython.com/&amp;source=gmail&amp;ust=1507728304187000&amp;usg=AFQjCNHkxB8zlx14JpNd7tiDvuxudsvCJQ">Full Stack Python</a> (<a href="https://github.com/mattmakai/fullstackpython.com" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://github.com/mattmakai/fullstackpython.com&amp;source=gmail&amp;ust=1507728304187000&amp;usg=AFQjCNGF8g_hEBWj5ou0mVKwPP8Xmm_37A">source code repository</a>). I push <a href="https://www.fullstackpython.com/change-log.html" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://www.fullstackpython.com/change-log.html&amp;source=gmail&amp;ust=1507728304187000&amp;usg=AFQjCNGF5h2I0muHkstqLlwIvCF84iiTjQ">Full Stack Python updates almost every day</a> to pages that describe <a href="https://www.fullstackpython.com/table-of-contents.html" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://www.fullstackpython.com/table-of-contents.html&amp;source=gmail&amp;ust=1507728304187000&amp;usg=AFQjCNF6rpkUpWymfjURnIyGkHuZ4zHr7Q">topics</a> ranging from <a href="https://www.fullstackpython.com/object-relational-mappers-orms.html" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://www.fullstackpython.com/object-relational-mappers-orms.html&amp;source=gmail&amp;ust=1507728304187000&amp;usg=AFQjCNG6sh1lfhh4Zjb3kqLl9PFPfwEhnQ">Object-Relational Mappers</a> to <a href="https://www.fullstackpython.com/template-engines.html" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://www.fullstackpython.com/template-engines.html&amp;source=gmail&amp;ust=1507728304187000&amp;usg=AFQjCNEuMIZU12dhcZjGhB6Q2k2wzbOKVQ">Template Engines</a>, and to <a href="https://www.fullstackpython.com/blog.html" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://www.fullstackpython.com/blog.html&amp;source=gmail&amp;ust=1507728304187000&amp;usg=AFQjCNGCMiCIOajIFyufEmZn9OzBWNOYkw">the tutorials blog</a>. </em></p>
+<p><em>It&#8217;s been a real pleasure working with <a href="https://talkpython.fm/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://talkpython.fm/&amp;source=gmail&amp;ust=1507728304187000&amp;usg=AFQjCNH-MbnjHTM4Q1gM36LMbI-jCpuagA">Michael Kennedy of the Talk Python to Me podcast</a> on the <a href="https://training.talkpython.fm/courses/explore_entrepreneurs/python-for-entrepreneurs-build-and-launch-your-online-business" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://training.talkpython.fm/courses/explore_entrepreneurs/python-for-entrepreneurs-build-and-launch-your-online-business&amp;source=gmail&amp;ust=1507728304187000&amp;usg=AFQjCNEnoRc3jEiWjBZVUOJz29L-cguz2Q">Python for Entrepreneurs video course</a>. I&#8217;ve also been working on updates to <a href="http://www.deploypython.com/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=http://www.deploypython.com/&amp;source=gmail&amp;ust=1507728304187000&amp;usg=AFQjCNGfcd5z9Gwvfjsu1wnH5DKmWaWpRQ">my Guide to Deployments book</a>, although it&#8217;s harder to find large blocks of time for side projects as my wife and I just had our first kid.</em></p>
+<div></div>
+<p dir="ltr"><b>Which Python libraries are your favorite (core or 3rd party)?</b></p>
+<p><em>The answer to this question could have its own blog post! I discussed some of my favorites in the <a href="https://pythonbytes.fm/episodes/show/38/hacking-classic-nintendo-games-with-python" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://pythonbytes.fm/episodes/show/38/hacking-classic-nintendo-games-with-python&amp;source=gmail&amp;ust=1507728304188000&amp;usg=AFQjCNGL7Kq9QXOaVlMsTZlWn9Tgxh9AwQ">PythonBytes podcast episode #38</a>, including <a href="http://docs.getpelican.com/en/stable/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=http://docs.getpelican.com/en/stable/&amp;source=gmail&amp;ust=1507728304188000&amp;usg=AFQjCNFG_S1c9PZj1w5Dn9QLKp0OHlJrJA">Pelican</a> and <a href="https://bokeh.pydata.org/en/latest/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://bokeh.pydata.org/en/latest/&amp;source=gmail&amp;ust=1507728304188000&amp;usg=AFQjCNEgWQcEIlAurO121ooBOOYP_yn72A">Bokeh</a>. <a href="http://docs.ansible.com/ansible/latest/index.html" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=http://docs.ansible.com/ansible/latest/index.html&amp;source=gmail&amp;ust=1507728304188000&amp;usg=AFQjCNElK_YSpObiDOJeoadjUUUt9S4Lrw">Ansible</a> and <a href="http://www.fabfile.org/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=http://www.fabfile.org/&amp;source=gmail&amp;ust=1507728304188000&amp;usg=AFQjCNGa1uTtT49ereE-CnGl0Krq4kdyQw">Fabric</a> are also high up on my list of favorites as well because I do lots of <a href="https://www.fullstackpython.com/web-development.html" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://www.fullstackpython.com/web-development.html&amp;source=gmail&amp;ust=1507728304188000&amp;usg=AFQjCNHg8uNCRQUBVIgWh3hKIq6ehhTy2A">web development</a> and <a href="https://www.fullstackpython.com/deployment.html" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://www.fullstackpython.com/deployment.html&amp;source=gmail&amp;ust=1507728304188000&amp;usg=AFQjCNGknTQctL0whHk1orao7gmzJS7SQg">deployments</a> work.<br />
+</em></p>
+<p><b>How did Full Stack Python come about?</b></p>
+<p><em>Back in 2012 I was going to the DC Python meetup every month and was talking to junior developers who were struggling to understand the Python ecosystem. After a lot of emailing with folks I decided to put what I wrote about the Python web stack online. I picked the name &#8220;Full Stack Python&#8221; because <a href="http://fullstackpython.com/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=http://fullstackpython.com&amp;source=gmail&amp;ust=1507728304188000&amp;usg=AFQjCNE6s062ixyEHRZ2PE_Cs6sgUOAIfA">fullstackpython.com</a> was an available domain name. Little did I know the name would stick and I&#8217;d still be working on the project many years later.</em></p>
+<p><em>I put up <a href="https://www.reddit.com/r/Python/comments/1wqmws/full_stack_python_a_free_open_source_guide_to/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://www.reddit.com/r/Python/comments/1wqmws/full_stack_python_a_free_open_source_guide_to/&amp;source=gmail&amp;ust=1507728304188000&amp;usg=AFQjCNH6uVc3Y_ZFKdPt7Yu2REuNgpwXiw">a link on the /r/python subreddit</a> after working on the site from late 2012 until early 2014. Developers on there were really supportive of the effort so it gave me motivation to keep working. Then that summer the site got another big boost with <a href="https://news.ycombinator.com/item?id=7985692" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://news.ycombinator.com/item?id%3D7985692&amp;source=gmail&amp;ust=1507728304188000&amp;usg=AFQjCNEnT_cS-q1KTv88AYrjtapYTTzRcA">a front page Hacker News hit</a>. The traffic and feedback from both events helped me to the site&#8217;s future directions. I also realized the time I was putting into the project was valuable to the broader Python community so I&#8217;ve kept working on it daily since then.</em></p>
+<p><b>What are some of the things that you learned while running the site?</b></p>
+<p><em>The fragmented nature of open source can make it difficult for beginner developers to know what they don&#8217;t know. To be a productive programmer you need to know more than just a programming language&#8217;s syntax. You have to understand what open source projects in an ecosystem can solve the problems you&#8217;re working on. For example, if you&#8217;re a Ruby developer who uses <a href="https://github.com/mperham/sidekiq" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://github.com/mperham/sidekiq&amp;source=gmail&amp;ust=1507728304188000&amp;usg=AFQjCNH7t0AHncrQ3OpnI9aP9kR0_EYZPw">Sidekiq</a> and then work on a Python project, you&#8217;d want to know what equivalent <a href="https://www.fullstackpython.com/task-queues.html" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://www.fullstackpython.com/task-queues.html&amp;source=gmail&amp;ust=1507728304188000&amp;usg=AFQjCNHssV2w-iytR3a1HWFNwyys8EIFlA">task queues</a> to use, such as <a href="https://www.fullstackpython.com/celery.html" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://www.fullstackpython.com/celery.html&amp;source=gmail&amp;ust=1507728304188000&amp;usg=AFQjCNGQ2E0dxFOLJD55P4cczvn_D52CPg">Celery</a>, <a href="https://www.fullstackpython.com/redis-queue-rq.html" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://www.fullstackpython.com/redis-queue-rq.html&amp;source=gmail&amp;ust=1507728304188000&amp;usg=AFQjCNG9qm52OYM_7fkuZ2QqYOf4wBWm_Q">RQ</a> or <a href="https://huey.readthedocs.io/en/latest/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://huey.readthedocs.io/en/latest/&amp;source=gmail&amp;ust=1507728304188000&amp;usg=AFQjCNHALx8I7JMot_00BhqnFmV58kepTA">Huey</a>.</em></p>
+<p><em>Also, I&#8217;ve found that experienced developers understand the difference between concepts and tools, just like how I <a href="https://www.fullstackpython.com/table-of-contents.html" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://www.fullstackpython.com/table-of-contents.html&amp;source=gmail&amp;ust=1507728304188000&amp;usg=AFQjCNE2ego184J1rAiEipVxcW8x9AOqUw">group topics on the site</a>. Concepts, such as <a href="https://www.fullstackpython.com/web-frameworks.html" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://www.fullstackpython.com/web-frameworks.html&amp;source=gmail&amp;ust=1507728304188000&amp;usg=AFQjCNHkpFkyR1g6xL2axfVeV6uPmzSTpw">web frameworks</a>, are generic and have different types of implementations. Tools are the implementations of a concept. For the web framework concept, a few example tool implementations are <a href="https://www.fullstackpython.com/django.html" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://www.fullstackpython.com/django.html&amp;source=gmail&amp;ust=1507728304188000&amp;usg=AFQjCNGdw3NPAvisbOtNv32Ck7MLXZEoTg">Django</a>, <a href="https://www.fullstackpython.com/flask.html" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://www.fullstackpython.com/flask.html&amp;source=gmail&amp;ust=1507728304188000&amp;usg=AFQjCNFNSXXWs0nUjt5hngN2fsrqypKeqw">Flask</a>, <a href="https://www.fullstackpython.com/pyramid.html" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://www.fullstackpython.com/pyramid.html&amp;source=gmail&amp;ust=1507728304188000&amp;usg=AFQjCNFHy6lUGlqDS70wNtWvvZc-640ZIw">Pyramid</a>. Within a concept there are many ways to implement a tool. Every tool comes with its own implementation philosophy, advantages and disadvantages.</em></p>
+<p><em>Many junior developers often discover a shiny new tool and say &#8220;cool, I&#8217;ll use this on my project!&#8221;. However, without understanding the concept behind the tool and what problem it solves, you just added a bunch of complexity to your project without a clear understanding of the trade offs.</em></p>
+<p dir="ltr"><b>Is there anything else you’d like to say?</b><b><br />
+</b></p>
+<p><em>I feel so fortunate to be part of our amazing Python community. I want to give a huge shout-out to the folks who run organizations such as the <a href="https://www.python.org/psf/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://www.python.org/psf/&amp;source=gmail&amp;ust=1507728304188000&amp;usg=AFQjCNHykUqkS5S4ssZinLoANHxsLoAOng">Python Software Foundation</a>, <a href="https://www.djangoproject.com/foundation/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://www.djangoproject.com/foundation/&amp;source=gmail&amp;ust=1507728304188000&amp;usg=AFQjCNF3Hju1_n21FgSjryzTE7287EfkdA">Django Software Foundation</a>, <a href="https://www.numfocus.org/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://www.numfocus.org/&amp;source=gmail&amp;ust=1507728304188000&amp;usg=AFQjCNEckuriJmIdKapO1IWx4irZWV5WpA">NumFOCUS</a> and many others like it that allow open source projects to flourish. It&#8217;s difficult, important work but the people behind those organizations often don&#8217;t get enough credit for making the community great. So thank you!</em></p>
+<p><strong>Thanks for doing the interview!</strong></p>
+<p>&nbsp;</p>
+</div><p><a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=https%3A%2F%2Fwww.blog.pythonlibrary.org%2F2017%2F10%2F30%2Fpydev-of-the-week-matthew-makai%2F&amp;linkname=PyDev%20of%20the%20Week%3A%20Matthew%20Makai" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=https%3A%2F%2Fwww.blog.pythonlibrary.org%2F2017%2F10%2F30%2Fpydev-of-the-week-matthew-makai%2F&amp;linkname=PyDev%20of%20the%20Week%3A%20Matthew%20Makai" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_google_plus" href="https://www.addtoany.com/add_to/google_plus?linkurl=https%3A%2F%2Fwww.blog.pythonlibrary.org%2F2017%2F10%2F30%2Fpydev-of-the-week-matthew-makai%2F&amp;linkname=PyDev%20of%20the%20Week%3A%20Matthew%20Makai" title="Google+" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save" href="https://www.addtoany.com/share#url=https%3A%2F%2Fwww.blog.pythonlibrary.org%2F2017%2F10%2F30%2Fpydev-of-the-week-matthew-makai%2F&amp;title=PyDev%20of%20the%20Week%3A%20Matthew%20Makai" data-a2a-url="https://www.blog.pythonlibrary.org/2017/10/30/pydev-of-the-week-matthew-makai/" data-a2a-title="PyDev of the Week: Matthew Makai"></a></p>]]></content:encoded>
+			<wfw:commentRss>https://www.blog.pythonlibrary.org/2017/10/30/pydev-of-the-week-matthew-makai/feed/</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+		</item>
+		<item>
+		<title>How to Add a Border to Your Photos with Python</title>
+		<link>https://www.blog.pythonlibrary.org/2017/10/26/how-to-add-a-border-to-your-photos-with-python/</link>
+		<comments>https://www.blog.pythonlibrary.org/2017/10/26/how-to-add-a-border-to-your-photos-with-python/#respond</comments>
+		<pubDate>Thu, 26 Oct 2017 17:15:53 +0000</pubDate>
+		<dc:creator><![CDATA[Mike]]></dc:creator>
+				<category><![CDATA[Image Editing]]></category>
+		<category><![CDATA[Python]]></category>
+		<category><![CDATA[Pillow]]></category>
+
+		<guid isPermaLink="false">http://www.blog.pythonlibrary.org/?p=6826</guid>
+		<description><![CDATA[Sometimes it&#8217;s fun to add a simple border to your photos. The Pillow package has a very easy method of adding such borders to your images via its ImageOps module. As usual, you will need to have Pillow installed to do any of the examples in this article. If you don&#8217;t have it already, you &#8230; <a href="https://www.blog.pythonlibrary.org/2017/10/26/how-to-add-a-border-to-your-photos-with-python/" class="more-link">Continue reading <span class="screen-reader-text">How to Add a Border to Your Photos with Python</span> <span class="meta-nav">&#8594;</span></a>]]></description>
+				<content:encoded><![CDATA[<div class="pf-content"><p>Sometimes it&#8217;s fun to add a simple border to your photos. The Pillow package has a very easy method of adding such borders to your images via its <strong>ImageOps</strong> module. As usual, you will need to have Pillow installed to do any of the examples in this article. If you don&#8217;t have it already, you can install it with pip:</p>
+<pre class="python">pip install Pillow</pre>
+<p>Now that we&#8217;ve taken care of that bit of housekeeping, let&#8217;s learn how to add a border!</p>
+<hr/>
+<h3>Adding a Border</h3>
+<p><img src="http://www.blog.pythonlibrary.org/wp-content/uploads/2017/10/butterfly-228x300.jpg" alt="" width="228" height="300" class="aligncenter size-medium wp-image-6827" srcset="https://www.blog.pythonlibrary.org/wp-content/uploads/2017/10/butterfly-228x300.jpg 228w, https://www.blog.pythonlibrary.org/wp-content/uploads/2017/10/butterfly.jpg 729w" sizes="(max-width: 228px) 100vw, 228px" /></p>
+<p>The focus of this article will be on using the <a href="http://pillow.readthedocs.io/en/4.3.x/reference/ImageOps.html" rel="noopener" target="_blank">ImageOps</a> module to add our borders. For this example, we will use this photo of a neat butterfly I took. Let&#8217;s write some code!<span id="more-6826"></span></p>
+<pre class="python"><span style="color: #ff7700;font-weight:bold;">from</span> PIL <span style="color: #ff7700;font-weight:bold;">import</span> Image, ImageOps
+&nbsp;
+&nbsp;
+<span style="color: #ff7700;font-weight:bold;">def</span> add_border<span style="color: black;">&#40;</span>input_image, output_image, border<span style="color: black;">&#41;</span>:
+    img = Image.<span style="color: #008000;">open</span><span style="color: black;">&#40;</span>input_image<span style="color: black;">&#41;</span>
+&nbsp;
+    <span style="color: #ff7700;font-weight:bold;">if</span> <span style="color: #008000;">isinstance</span><span style="color: black;">&#40;</span>border, <span style="color: #008000;">int</span><span style="color: black;">&#41;</span> <span style="color: #ff7700;font-weight:bold;">or</span> <span style="color: #008000;">isinstance</span><span style="color: black;">&#40;</span>border, <span style="color: #008000;">tuple</span><span style="color: black;">&#41;</span>:
+        bimg = ImageOps.<span style="color: black;">expand</span><span style="color: black;">&#40;</span>img, border=border<span style="color: black;">&#41;</span>
+    <span style="color: #ff7700;font-weight:bold;">else</span>:
+        <span style="color: #ff7700;font-weight:bold;">raise</span> <span style="color: #008000;">RuntimeError</span><span style="color: black;">&#40;</span><span style="color: #483d8b;">'Border is not an integer or tuple!'</span><span style="color: black;">&#41;</span>
+&nbsp;
+    bimg.<span style="color: black;">save</span><span style="color: black;">&#40;</span>output_image<span style="color: black;">&#41;</span>
+&nbsp;
+<span style="color: #ff7700;font-weight:bold;">if</span> __name__ == <span style="color: #483d8b;">'__main__'</span>:
+    in_img = <span style="color: #483d8b;">'butterfly.jpg'</span>
+&nbsp;
+    add_border<span style="color: black;">&#40;</span>in_img, output_image=<span style="color: #483d8b;">'butterfly_border.jpg'</span>,
+               border=<span style="color: #ff4500;">100</span><span style="color: black;">&#41;</span></pre>
+<p>In the code above, we create a function that can accept three arguments:</p>
+<ul>
+<li>The input image path</li>
+<li>The output image path</li>
+<li>The border, which can be an integer or a tuple of up to 4 integers representing pixels for each of the four sides of the image</li>
+</ul>
+<p>We open the input image and then we check the border&#8217;s type. Is it an int or a tuple or something else? If it&#8217;s one of the first two, we add our border by calling the <strong>expand()</strong> function. Otherwise we raise an error because we passed in an invalid type. Finally we save the image. This is the result I got:</p>
+<p><img src="http://www.blog.pythonlibrary.org/wp-content/uploads/2017/10/butterfly_border-240x300.jpg" alt="" width="240" height="300" class="aligncenter size-medium wp-image-6828" srcset="https://www.blog.pythonlibrary.org/wp-content/uploads/2017/10/butterfly_border-240x300.jpg 240w, https://www.blog.pythonlibrary.org/wp-content/uploads/2017/10/butterfly_border-768x958.jpg 768w, https://www.blog.pythonlibrary.org/wp-content/uploads/2017/10/butterfly_border-821x1024.jpg 821w, https://www.blog.pythonlibrary.org/wp-content/uploads/2017/10/butterfly_border.jpg 929w" sizes="(max-width: 240px) 100vw, 240px" /></p>
+<p>As you can see, when you just pass an integer in as your border, it applies to all four sides of the image. If we want the border on the top and bottom to be different then the right and left, we need to specify that. Let&#8217;s update the code and see what happens!</p>
+<pre class="python"><span style="color: #ff7700;font-weight:bold;">from</span> PIL <span style="color: #ff7700;font-weight:bold;">import</span> Image, ImageOps
+&nbsp;
+&nbsp;
+<span style="color: #ff7700;font-weight:bold;">def</span> add_border<span style="color: black;">&#40;</span>input_image, output_image, border<span style="color: black;">&#41;</span>:
+    img = Image.<span style="color: #008000;">open</span><span style="color: black;">&#40;</span>input_image<span style="color: black;">&#41;</span>
+&nbsp;
+    <span style="color: #ff7700;font-weight:bold;">if</span> <span style="color: #008000;">isinstance</span><span style="color: black;">&#40;</span>border, <span style="color: #008000;">int</span><span style="color: black;">&#41;</span> <span style="color: #ff7700;font-weight:bold;">or</span> <span style="color: #008000;">isinstance</span><span style="color: black;">&#40;</span>border, <span style="color: #008000;">tuple</span><span style="color: black;">&#41;</span>:
+        bimg = ImageOps.<span style="color: black;">expand</span><span style="color: black;">&#40;</span>img, border=border<span style="color: black;">&#41;</span>
+    <span style="color: #ff7700;font-weight:bold;">else</span>:
+        <span style="color: #ff7700;font-weight:bold;">raise</span> <span style="color: #008000;">RuntimeError</span><span style="color: black;">&#40;</span><span style="color: #483d8b;">'Border is not an integer or tuple!'</span><span style="color: black;">&#41;</span>
+&nbsp;
+    bimg.<span style="color: black;">save</span><span style="color: black;">&#40;</span>output_image<span style="color: black;">&#41;</span>
+&nbsp;
+<span style="color: #ff7700;font-weight:bold;">if</span> __name__ == <span style="color: #483d8b;">'__main__'</span>:
+    in_img = <span style="color: #483d8b;">'butterfly.jpg'</span>
+&nbsp;
+    add_border<span style="color: black;">&#40;</span>in_img,
+               output_image=<span style="color: #483d8b;">'butterfly_border_top_bottom.jpg'</span>,
+               border=<span style="color: black;">&#40;</span><span style="color: #ff4500;">10</span>, <span style="color: #ff4500;">50</span><span style="color: black;">&#41;</span><span style="color: black;">&#41;</span></pre>
+<p>Here we want to add a 10 pixel border to the left and right sides and a 50 pixel border to the top and bottom of the image. If you run this code, you should get the following result:</p>
+<p><img src="http://www.blog.pythonlibrary.org/wp-content/uploads/2017/10/butterfly_border_top_bottom-212x300.jpg" alt="" width="212" height="300" class="aligncenter size-medium wp-image-6830" srcset="https://www.blog.pythonlibrary.org/wp-content/uploads/2017/10/butterfly_border_top_bottom-212x300.jpg 212w, https://www.blog.pythonlibrary.org/wp-content/uploads/2017/10/butterfly_border_top_bottom-724x1024.jpg 724w, https://www.blog.pythonlibrary.org/wp-content/uploads/2017/10/butterfly_border_top_bottom.jpg 749w" sizes="(max-width: 212px) 100vw, 212px" /></p>
+<p>Now let&#8217;s try specifying different values for all four sides!</p>
+<pre class="python"><span style="color: #ff7700;font-weight:bold;">from</span> PIL <span style="color: #ff7700;font-weight:bold;">import</span> Image, ImageOps
+&nbsp;
+&nbsp;
+<span style="color: #ff7700;font-weight:bold;">def</span> add_border<span style="color: black;">&#40;</span>input_image, output_image, border<span style="color: black;">&#41;</span>:
+    img = Image.<span style="color: #008000;">open</span><span style="color: black;">&#40;</span>input_image<span style="color: black;">&#41;</span>
+&nbsp;
+    <span style="color: #ff7700;font-weight:bold;">if</span> <span style="color: #008000;">isinstance</span><span style="color: black;">&#40;</span>border, <span style="color: #008000;">int</span><span style="color: black;">&#41;</span> <span style="color: #ff7700;font-weight:bold;">or</span> <span style="color: #008000;">isinstance</span><span style="color: black;">&#40;</span>border, <span style="color: #008000;">tuple</span><span style="color: black;">&#41;</span>:
+        bimg = ImageOps.<span style="color: black;">expand</span><span style="color: black;">&#40;</span>img, border=border<span style="color: black;">&#41;</span>
+    <span style="color: #ff7700;font-weight:bold;">else</span>:
+        <span style="color: #ff7700;font-weight:bold;">raise</span> <span style="color: #008000;">RuntimeError</span><span style="color: black;">&#40;</span><span style="color: #483d8b;">'Border is not an integer or tuple!'</span><span style="color: black;">&#41;</span>
+&nbsp;
+    bimg.<span style="color: black;">save</span><span style="color: black;">&#40;</span>output_image<span style="color: black;">&#41;</span>
+&nbsp;
+<span style="color: #ff7700;font-weight:bold;">if</span> __name__ == <span style="color: #483d8b;">'__main__'</span>:
+    in_img = <span style="color: #483d8b;">'butterfly.jpg'</span>
+&nbsp;
+    add_border<span style="color: black;">&#40;</span>in_img,
+               output_image=<span style="color: #483d8b;">'butterfly_border_all_different.jpg'</span>,
+               border=<span style="color: black;">&#40;</span><span style="color: #ff4500;">10</span>, <span style="color: #ff4500;">30</span>, <span style="color: #ff4500;">20</span>, <span style="color: #ff4500;">50</span><span style="color: black;">&#41;</span><span style="color: black;">&#41;</span></pre>
+<p>In this example, we tell Pillow that we want a border where the left side is 10 pixels, the top is 30 pixels, the right is 20 pixels and the bottom is 50 pixels wide. When I ran this code, I got this:</p>
+<p><img src="http://www.blog.pythonlibrary.org/wp-content/uploads/2017/10/butterfly_border_all_different-219x300.jpg" alt="" width="219" height="300" class="aligncenter size-medium wp-image-6829" srcset="https://www.blog.pythonlibrary.org/wp-content/uploads/2017/10/butterfly_border_all_different-219x300.jpg 219w, https://www.blog.pythonlibrary.org/wp-content/uploads/2017/10/butterfly_border_all_different-748x1024.jpg 748w, https://www.blog.pythonlibrary.org/wp-content/uploads/2017/10/butterfly_border_all_different.jpg 759w" sizes="(max-width: 219px) 100vw, 219px" /></p>
+<p>Frankly I don&#8217;t know why you would want all four sides to have a different size border, but if you do, it&#8217;s easy to apply.</p>
+<hr/>
+<h3>Changing the Border Color</h3>
+<p>You can also set the color of the border that you&#8217;re adding. The default was obviously black. The Pillow package supports specifying colors via “#rgb” (i.e. “#ff0000” for red), “rgb(red, green, blue)” where the RGB values are integers between 0 and 255, HSL values or HTML color names. Let&#8217;s update our code and add some color to our border:</p>
+<pre class="python"><span style="color: #ff7700;font-weight:bold;">from</span> PIL <span style="color: #ff7700;font-weight:bold;">import</span> Image, ImageOps
+&nbsp;
+&nbsp;
+<span style="color: #ff7700;font-weight:bold;">def</span> add_border<span style="color: black;">&#40;</span>input_image, output_image, border, color=<span style="color: #ff4500;">0</span><span style="color: black;">&#41;</span>:
+    img = Image.<span style="color: #008000;">open</span><span style="color: black;">&#40;</span>input_image<span style="color: black;">&#41;</span>
+&nbsp;
+    <span style="color: #ff7700;font-weight:bold;">if</span> <span style="color: #008000;">isinstance</span><span style="color: black;">&#40;</span>border, <span style="color: #008000;">int</span><span style="color: black;">&#41;</span> <span style="color: #ff7700;font-weight:bold;">or</span> <span style="color: #008000;">isinstance</span><span style="color: black;">&#40;</span>border, <span style="color: #008000;">tuple</span><span style="color: black;">&#41;</span>:
+        bimg = ImageOps.<span style="color: black;">expand</span><span style="color: black;">&#40;</span>img, border=border, fill=color<span style="color: black;">&#41;</span>
+    <span style="color: #ff7700;font-weight:bold;">else</span>:
+        <span style="color: #ff7700;font-weight:bold;">raise</span> <span style="color: #008000;">RuntimeError</span><span style="color: black;">&#40;</span><span style="color: #483d8b;">'Border is not an integer or tuple!'</span><span style="color: black;">&#41;</span>
+&nbsp;
+    bimg.<span style="color: black;">save</span><span style="color: black;">&#40;</span>output_image<span style="color: black;">&#41;</span>
+&nbsp;
+<span style="color: #ff7700;font-weight:bold;">if</span> __name__ == <span style="color: #483d8b;">'__main__'</span>:
+    in_img = <span style="color: #483d8b;">'butterfly.jpg'</span>
+&nbsp;
+    add_border<span style="color: black;">&#40;</span>in_img,
+               output_image=<span style="color: #483d8b;">'butterfly_border_indianred.jpg'</span>,
+               border=<span style="color: #ff4500;">100</span>,
+               color=<span style="color: #483d8b;">'indianred'</span><span style="color: black;">&#41;</span></pre>
+<p>You will note that we added a new parameter here that specifies the color we want our border to be. The default is black, which is zero (0). In this example, we pass in the HTML color &#8216;indianred&#8217;. Here is the result:</p>
+<p><img src="http://www.blog.pythonlibrary.org/wp-content/uploads/2017/10/butterfly_border_indianred-240x300.jpg" alt="" width="240" height="300" class="aligncenter size-medium wp-image-6831" srcset="https://www.blog.pythonlibrary.org/wp-content/uploads/2017/10/butterfly_border_indianred-240x300.jpg 240w, https://www.blog.pythonlibrary.org/wp-content/uploads/2017/10/butterfly_border_indianred-768x958.jpg 768w, https://www.blog.pythonlibrary.org/wp-content/uploads/2017/10/butterfly_border_indianred-821x1024.jpg 821w, https://www.blog.pythonlibrary.org/wp-content/uploads/2017/10/butterfly_border_indianred.jpg 929w" sizes="(max-width: 240px) 100vw, 240px" /></p>
+<p>You could get the same effect by changing the passed in value from &#8216;indianred&#8217; to &#8216;#CD5C5C&#8217;. </p>
+<p>Just for fun, try changing the value you pass in to &#8216;rgb(255,215,0)&#8217;, which is a Gold color. If you do, you can get your border to look like this:</p>
+<p><img src="http://www.blog.pythonlibrary.org/wp-content/uploads/2017/10/butterfly_border_gold-240x300.jpg" alt="" width="240" height="300" class="aligncenter size-medium wp-image-6832" srcset="https://www.blog.pythonlibrary.org/wp-content/uploads/2017/10/butterfly_border_gold-240x300.jpg 240w, https://www.blog.pythonlibrary.org/wp-content/uploads/2017/10/butterfly_border_gold-768x958.jpg 768w, https://www.blog.pythonlibrary.org/wp-content/uploads/2017/10/butterfly_border_gold-821x1024.jpg 821w, https://www.blog.pythonlibrary.org/wp-content/uploads/2017/10/butterfly_border_gold.jpg 929w" sizes="(max-width: 240px) 100vw, 240px" /></p>
+<p>Note that you could also pass in &#8216;gold&#8217;, &#8216;Gold&#8217; or &#8216;#FFD700&#8217; and it would have resulted in the same color. </p>
+<hr/>
+<h3>Wrapping Up</h3>
+<p>At this point you should know how to add simple borders to your photos. As you&#8217;ve seen, you can change the number of pixels of border color for each side individually or for pairs or even for all four sides simultaneously. You can also change the color of the border to pretty much any color under the sun. Take some time to play around with the code and see what you can come up with!</p>
+<hr/>
+<h3>Related Reading</h3>
+<ul>
+<li>Kanoki &#8211; <a href="http://kanoki.org/2017/08/15/draw-pencil-sketches-of-your-photo/" rel="noopener" target="_blank">Draw Pencil sketches of your photo</a></li>
+<li>How to Watermark Your <a href="https://www.blog.pythonlibrary.org/2017/10/17/how-to-watermark-your-photos-with-python/" rel="noopener" target="_blank">Photos with Python</a></li>
+<li><a href="https://www.blog.pythonlibrary.org/2017/10/12/how-to-resize-a-photo-with-python/" rel="noopener" target="_blank">How to Resize a Photo with Python</a></li>
+<li>Convert a <a href="https://www.blog.pythonlibrary.org/2017/10/11/convert-a-photo-to-black-and-white-in-python/" rel="noopener" target="_blank">Photo to Black and White in Python</a></li>
+<li><a href="https://www.blog.pythonlibrary.org/2017/10/05/how-to-rotate-mirror-photos-with-python/" rel="noopener" target="_blank">How to Rotate / Mirror Photos</a> with Python</li>
+<li><a href="https://www.blog.pythonlibrary.org/2017/10/03/how-to-crop-a-photo-with-python/" rel="noopener" target="_blank">How to Crop a Photo</a> with Python</li>
+<li><a href="https://www.blog.pythonlibrary.org/2017/10/24/enhancing-photos-with-python/" rel="noopener" target="_blank">Enhancing Photos</a> with Python</li>
+</ul>
+</div><p><a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=https%3A%2F%2Fwww.blog.pythonlibrary.org%2F2017%2F10%2F26%2Fhow-to-add-a-border-to-your-photos-with-python%2F&amp;linkname=How%20to%20Add%20a%20Border%20to%20Your%20Photos%20with%20Python" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=https%3A%2F%2Fwww.blog.pythonlibrary.org%2F2017%2F10%2F26%2Fhow-to-add-a-border-to-your-photos-with-python%2F&amp;linkname=How%20to%20Add%20a%20Border%20to%20Your%20Photos%20with%20Python" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_google_plus" href="https://www.addtoany.com/add_to/google_plus?linkurl=https%3A%2F%2Fwww.blog.pythonlibrary.org%2F2017%2F10%2F26%2Fhow-to-add-a-border-to-your-photos-with-python%2F&amp;linkname=How%20to%20Add%20a%20Border%20to%20Your%20Photos%20with%20Python" title="Google+" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save" href="https://www.addtoany.com/share#url=https%3A%2F%2Fwww.blog.pythonlibrary.org%2F2017%2F10%2F26%2Fhow-to-add-a-border-to-your-photos-with-python%2F&amp;title=How%20to%20Add%20a%20Border%20to%20Your%20Photos%20with%20Python" data-a2a-url="https://www.blog.pythonlibrary.org/2017/10/26/how-to-add-a-border-to-your-photos-with-python/" data-a2a-title="How to Add a Border to Your Photos with Python"></a></p>]]></content:encoded>
+			<wfw:commentRss>https://www.blog.pythonlibrary.org/2017/10/26/how-to-add-a-border-to-your-photos-with-python/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>wxPython: Drag and Drop an Image onto Your Application</title>
+		<link>https://www.blog.pythonlibrary.org/2017/10/25/wx_drag_and_drop_images/</link>
+		<comments>https://www.blog.pythonlibrary.org/2017/10/25/wx_drag_and_drop_images/#comments</comments>
+		<pubDate>Wed, 25 Oct 2017 17:15:39 +0000</pubDate>
+		<dc:creator><![CDATA[Mike]]></dc:creator>
+				<category><![CDATA[GUI Toolkits]]></category>
+		<category><![CDATA[Python]]></category>
+		<category><![CDATA[wxPython]]></category>
+
+		<guid isPermaLink="false">http://www.blog.pythonlibrary.org/?p=6815</guid>
+		<description><![CDATA[I recently came across a question on StackOverflow where the user wanted to know how to drag images onto their image control in wxPython and have the dragged image resize into a thumbnail. This piqued my interest and I decided to figure out how to do it. I knew that you could create a thumbnail &#8230; <a href="https://www.blog.pythonlibrary.org/2017/10/25/wx_drag_and_drop_images/" class="more-link">Continue reading <span class="screen-reader-text">wxPython: Drag and Drop an Image onto Your Application</span> <span class="meta-nav">&#8594;</span></a>]]></description>
+				<content:encoded><![CDATA[<div class="pf-content"><p>I recently came across a question on <a href="https://stackoverflow.com/q/46852696/393194" rel="noopener" target="_blank">StackOverflow</a> where the user wanted to know how to drag images onto their image control in wxPython and have the dragged image resize into a thumbnail. This piqued my interest and I decided to figure out how to do it.</p>
+<p>I knew that you could create a thumbnail in Python using the <a href="https://pillow.readthedocs.io/" rel="noopener" target="_blank">Pillow package</a>. So if you&#8217;d like to follow along you will need to install Pillow and wxPython with pip:</p>
+<pre class="python">pip install Pillow wxPython</pre>
+<p>Now that we have the latest versions of the packages we need, we can write some code. Let&#8217;s take a look:<span id="more-6815"></span></p>
+<p><em>Note: You will want to have wxPython 4 to ensure that this works correctly</em></p>
+<pre class="python"><span style="color: #ff7700;font-weight:bold;">import</span> <span style="color: #dc143c;">os</span>
+<span style="color: #ff7700;font-weight:bold;">import</span> wx
+&nbsp;
+<span style="color: #ff7700;font-weight:bold;">from</span> PIL <span style="color: #ff7700;font-weight:bold;">import</span> Image
+<span style="color: #ff7700;font-weight:bold;">from</span> wx.<span style="color: black;">lib</span>.<span style="color: black;">pubsub</span> <span style="color: #ff7700;font-weight:bold;">import</span> pub 
+&nbsp;
+PhotoMaxSize = <span style="color: #ff4500;">240</span>
+&nbsp;
+&nbsp;
+<span style="color: #ff7700;font-weight:bold;">class</span> DropTarget<span style="color: black;">&#40;</span>wx.<span style="color: black;">FileDropTarget</span><span style="color: black;">&#41;</span>:
+&nbsp;
+    <span style="color: #ff7700;font-weight:bold;">def</span> <span style="color: #0000cd;">__init__</span><span style="color: black;">&#40;</span><span style="color: #008000;">self</span>, widget<span style="color: black;">&#41;</span>:
+        wx.<span style="color: black;">FileDropTarget</span>.<span style="color: #0000cd;">__init__</span><span style="color: black;">&#40;</span><span style="color: #008000;">self</span><span style="color: black;">&#41;</span>
+        <span style="color: #008000;">self</span>.<span style="color: black;">widget</span> = widget
+&nbsp;
+    <span style="color: #ff7700;font-weight:bold;">def</span> OnDropFiles<span style="color: black;">&#40;</span><span style="color: #008000;">self</span>, x, y, filenames<span style="color: black;">&#41;</span>:
+        image = Image.<span style="color: #008000;">open</span><span style="color: black;">&#40;</span>filenames<span style="color: black;">&#91;</span><span style="color: #ff4500;">0</span><span style="color: black;">&#93;</span><span style="color: black;">&#41;</span>
+        image.<span style="color: black;">thumbnail</span><span style="color: black;">&#40;</span><span style="color: black;">&#40;</span>PhotoMaxSize, PhotoMaxSize<span style="color: black;">&#41;</span><span style="color: black;">&#41;</span>
+        image.<span style="color: black;">save</span><span style="color: black;">&#40;</span><span style="color: #483d8b;">'thumbnail.png'</span><span style="color: black;">&#41;</span>
+        pub.<span style="color: black;">sendMessage</span><span style="color: black;">&#40;</span><span style="color: #483d8b;">'dnd'</span>, filepath=<span style="color: #483d8b;">'thumbnail.png'</span><span style="color: black;">&#41;</span>
+        <span style="color: #ff7700;font-weight:bold;">return</span> <span style="color: #008000;">True</span>
+&nbsp;
+&nbsp;
+<span style="color: #ff7700;font-weight:bold;">class</span> PhotoCtrl<span style="color: black;">&#40;</span>wx.<span style="color: black;">App</span><span style="color: black;">&#41;</span>:
+    <span style="color: #ff7700;font-weight:bold;">def</span> <span style="color: #0000cd;">__init__</span><span style="color: black;">&#40;</span><span style="color: #008000;">self</span>, redirect=<span style="color: #008000;">False</span>, filename=<span style="color: #008000;">None</span><span style="color: black;">&#41;</span>:
+        wx.<span style="color: black;">App</span>.<span style="color: #0000cd;">__init__</span><span style="color: black;">&#40;</span><span style="color: #008000;">self</span>, redirect, filename<span style="color: black;">&#41;</span>
+        <span style="color: #008000;">self</span>.<span style="color: black;">frame</span> = wx.<span style="color: black;">Frame</span><span style="color: black;">&#40;</span><span style="color: #008000;">None</span>, title=<span style="color: #483d8b;">'Photo Control'</span><span style="color: black;">&#41;</span>
+&nbsp;
+        <span style="color: #008000;">self</span>.<span style="color: black;">panel</span> = wx.<span style="color: black;">Panel</span><span style="color: black;">&#40;</span><span style="color: #008000;">self</span>.<span style="color: black;">frame</span><span style="color: black;">&#41;</span>
+        pub.<span style="color: black;">subscribe</span><span style="color: black;">&#40;</span><span style="color: #008000;">self</span>.<span style="color: black;">update_image_on_dnd</span>, <span style="color: #483d8b;">'dnd'</span><span style="color: black;">&#41;</span>
+&nbsp;
+        <span style="color: #008000;">self</span>.<span style="color: black;">createWidgets</span><span style="color: black;">&#40;</span><span style="color: black;">&#41;</span>
+        <span style="color: #008000;">self</span>.<span style="color: black;">frame</span>.<span style="color: black;">Show</span><span style="color: black;">&#40;</span><span style="color: black;">&#41;</span>
+&nbsp;
+    <span style="color: #ff7700;font-weight:bold;">def</span> createWidgets<span style="color: black;">&#40;</span><span style="color: #008000;">self</span><span style="color: black;">&#41;</span>:
+        instructions = <span style="color: #483d8b;">'Browse for an image or Drag and Drop'</span>
+        img = wx.<span style="color: black;">Image</span><span style="color: black;">&#40;</span><span style="color: #ff4500;">240</span>,<span style="color: #ff4500;">240</span><span style="color: black;">&#41;</span>
+        <span style="color: #008000;">self</span>.<span style="color: black;">imageCtrl</span> = wx.<span style="color: black;">StaticBitmap</span><span style="color: black;">&#40;</span><span style="color: #008000;">self</span>.<span style="color: black;">panel</span>, wx.<span style="color: black;">ID_ANY</span>, 
+                                         wx.<span style="color: black;">Bitmap</span><span style="color: black;">&#40;</span>img<span style="color: black;">&#41;</span><span style="color: black;">&#41;</span>
+        filedroptarget = DropTarget<span style="color: black;">&#40;</span><span style="color: #008000;">self</span><span style="color: black;">&#41;</span>
+        <span style="color: #008000;">self</span>.<span style="color: black;">imageCtrl</span>.<span style="color: black;">SetDropTarget</span><span style="color: black;">&#40;</span>filedroptarget<span style="color: black;">&#41;</span>
+&nbsp;
+        instructLbl = wx.<span style="color: black;">StaticText</span><span style="color: black;">&#40;</span><span style="color: #008000;">self</span>.<span style="color: black;">panel</span>, label=instructions<span style="color: black;">&#41;</span>
+        <span style="color: #008000;">self</span>.<span style="color: black;">photoTxt</span> = wx.<span style="color: black;">TextCtrl</span><span style="color: black;">&#40;</span><span style="color: #008000;">self</span>.<span style="color: black;">panel</span>, size=<span style="color: black;">&#40;</span><span style="color: #ff4500;">200</span>,<span style="color: #ff4500;">-1</span><span style="color: black;">&#41;</span><span style="color: black;">&#41;</span>
+        browseBtn = wx.<span style="color: black;">Button</span><span style="color: black;">&#40;</span><span style="color: #008000;">self</span>.<span style="color: black;">panel</span>, label=<span style="color: #483d8b;">'Browse'</span><span style="color: black;">&#41;</span>
+        browseBtn.<span style="color: black;">Bind</span><span style="color: black;">&#40;</span>wx.<span style="color: black;">EVT_BUTTON</span>, <span style="color: #008000;">self</span>.<span style="color: black;">on_browse</span><span style="color: black;">&#41;</span>
+&nbsp;
+        <span style="color: #008000;">self</span>.<span style="color: black;">mainSizer</span> = wx.<span style="color: black;">BoxSizer</span><span style="color: black;">&#40;</span>wx.<span style="color: black;">VERTICAL</span><span style="color: black;">&#41;</span>
+        <span style="color: #008000;">self</span>.<span style="color: black;">sizer</span> = wx.<span style="color: black;">BoxSizer</span><span style="color: black;">&#40;</span>wx.<span style="color: black;">HORIZONTAL</span><span style="color: black;">&#41;</span>
+&nbsp;
+        <span style="color: #008000;">self</span>.<span style="color: black;">mainSizer</span>.<span style="color: black;">Add</span><span style="color: black;">&#40;</span>wx.<span style="color: black;">StaticLine</span><span style="color: black;">&#40;</span><span style="color: #008000;">self</span>.<span style="color: black;">panel</span>, wx.<span style="color: black;">ID_ANY</span><span style="color: black;">&#41;</span>,
+                           <span style="color: #ff4500;">0</span>, wx.<span style="color: black;">ALL</span>|wx.<span style="color: black;">EXPAND</span>, <span style="color: #ff4500;">5</span><span style="color: black;">&#41;</span>
+        <span style="color: #008000;">self</span>.<span style="color: black;">mainSizer</span>.<span style="color: black;">Add</span><span style="color: black;">&#40;</span>instructLbl, <span style="color: #ff4500;">0</span>, wx.<span style="color: black;">ALL</span>, <span style="color: #ff4500;">5</span><span style="color: black;">&#41;</span>
+        <span style="color: #008000;">self</span>.<span style="color: black;">mainSizer</span>.<span style="color: black;">Add</span><span style="color: black;">&#40;</span><span style="color: #008000;">self</span>.<span style="color: black;">imageCtrl</span>, <span style="color: #ff4500;">0</span>, wx.<span style="color: black;">ALL</span>, <span style="color: #ff4500;">5</span><span style="color: black;">&#41;</span>
+        <span style="color: #008000;">self</span>.<span style="color: black;">sizer</span>.<span style="color: black;">Add</span><span style="color: black;">&#40;</span><span style="color: #008000;">self</span>.<span style="color: black;">photoTxt</span>, <span style="color: #ff4500;">0</span>, wx.<span style="color: black;">ALL</span>, <span style="color: #ff4500;">5</span><span style="color: black;">&#41;</span>
+        <span style="color: #008000;">self</span>.<span style="color: black;">sizer</span>.<span style="color: black;">Add</span><span style="color: black;">&#40;</span>browseBtn, <span style="color: #ff4500;">0</span>, wx.<span style="color: black;">ALL</span>, <span style="color: #ff4500;">5</span><span style="color: black;">&#41;</span>
+        <span style="color: #008000;">self</span>.<span style="color: black;">mainSizer</span>.<span style="color: black;">Add</span><span style="color: black;">&#40;</span><span style="color: #008000;">self</span>.<span style="color: black;">sizer</span>, <span style="color: #ff4500;">0</span>, wx.<span style="color: black;">ALL</span>, <span style="color: #ff4500;">5</span><span style="color: black;">&#41;</span>
+&nbsp;
+        <span style="color: #008000;">self</span>.<span style="color: black;">panel</span>.<span style="color: black;">SetSizer</span><span style="color: black;">&#40;</span><span style="color: #008000;">self</span>.<span style="color: black;">mainSizer</span><span style="color: black;">&#41;</span>
+        <span style="color: #008000;">self</span>.<span style="color: black;">mainSizer</span>.<span style="color: black;">Fit</span><span style="color: black;">&#40;</span><span style="color: #008000;">self</span>.<span style="color: black;">frame</span><span style="color: black;">&#41;</span>
+&nbsp;
+        <span style="color: #008000;">self</span>.<span style="color: black;">panel</span>.<span style="color: black;">Layout</span><span style="color: black;">&#40;</span><span style="color: black;">&#41;</span>
+&nbsp;
+    <span style="color: #ff7700;font-weight:bold;">def</span> on_browse<span style="color: black;">&#40;</span><span style="color: #008000;">self</span>, event<span style="color: black;">&#41;</span>:
+        <span style="color: #483d8b;">&quot;&quot;</span><span style="color: #483d8b;">&quot; 
+        Browse for file
+        &quot;</span><span style="color: #483d8b;">&quot;&quot;</span>
+        wildcard = <span style="color: #483d8b;">&quot;JPEG files (*.jpg)|*.jpg&quot;</span>
+        dialog = wx.<span style="color: black;">FileDialog</span><span style="color: black;">&#40;</span><span style="color: #008000;">None</span>, <span style="color: #483d8b;">&quot;Choose a file&quot;</span>,
+                               wildcard=wildcard,
+                               style=wx.<span style="color: black;">OPEN</span><span style="color: black;">&#41;</span>
+        <span style="color: #ff7700;font-weight:bold;">if</span> dialog.<span style="color: black;">ShowModal</span><span style="color: black;">&#40;</span><span style="color: black;">&#41;</span> == wx.<span style="color: black;">ID_OK</span>:
+            <span style="color: #008000;">self</span>.<span style="color: black;">photoTxt</span>.<span style="color: black;">SetValue</span><span style="color: black;">&#40;</span>dialog.<span style="color: black;">GetPath</span><span style="color: black;">&#40;</span><span style="color: black;">&#41;</span><span style="color: black;">&#41;</span>
+        dialog.<span style="color: black;">Destroy</span><span style="color: black;">&#40;</span><span style="color: black;">&#41;</span> 
+        <span style="color: #008000;">self</span>.<span style="color: black;">on_view</span><span style="color: black;">&#40;</span><span style="color: black;">&#41;</span>
+&nbsp;
+    <span style="color: #ff7700;font-weight:bold;">def</span> update_image_on_dnd<span style="color: black;">&#40;</span><span style="color: #008000;">self</span>, filepath<span style="color: black;">&#41;</span>:
+        <span style="color: #008000;">self</span>.<span style="color: black;">on_view</span><span style="color: black;">&#40;</span>filepath=filepath<span style="color: black;">&#41;</span>
+&nbsp;
+    <span style="color: #ff7700;font-weight:bold;">def</span> on_view<span style="color: black;">&#40;</span><span style="color: #008000;">self</span>, filepath=<span style="color: #008000;">None</span><span style="color: black;">&#41;</span>:
+        <span style="color: #ff7700;font-weight:bold;">if</span> <span style="color: #ff7700;font-weight:bold;">not</span> filepath:
+            filepath = <span style="color: #008000;">self</span>.<span style="color: black;">photoTxt</span>.<span style="color: black;">GetValue</span><span style="color: black;">&#40;</span><span style="color: black;">&#41;</span>
+&nbsp;
+        img = wx.<span style="color: black;">Image</span><span style="color: black;">&#40;</span>filepath, wx.<span style="color: black;">BITMAP_TYPE_ANY</span><span style="color: black;">&#41;</span>
+        <span style="color: #808080; font-style: italic;"># scale the image, preserving the aspect ratio</span>
+        W = img.<span style="color: black;">GetWidth</span><span style="color: black;">&#40;</span><span style="color: black;">&#41;</span>
+        H = img.<span style="color: black;">GetHeight</span><span style="color: black;">&#40;</span><span style="color: black;">&#41;</span>
+        <span style="color: #ff7700;font-weight:bold;">if</span> W <span style="color: #66cc66;">&gt;</span> H:
+            NewW = PhotoMaxSize
+            NewH = PhotoMaxSize <span style="color: #66cc66;">*</span> H / W
+        <span style="color: #ff7700;font-weight:bold;">else</span>:
+            NewH = PhotoMaxSize
+            NewW = PhotoMaxSize <span style="color: #66cc66;">*</span> W / H
+        img = img.<span style="color: black;">Scale</span><span style="color: black;">&#40;</span>NewW,NewH<span style="color: black;">&#41;</span>
+&nbsp;
+        <span style="color: #008000;">self</span>.<span style="color: black;">imageCtrl</span>.<span style="color: black;">SetBitmap</span><span style="color: black;">&#40;</span>wx.<span style="color: black;">Bitmap</span><span style="color: black;">&#40;</span>img<span style="color: black;">&#41;</span><span style="color: black;">&#41;</span>
+        <span style="color: #008000;">self</span>.<span style="color: black;">panel</span>.<span style="color: black;">Refresh</span><span style="color: black;">&#40;</span><span style="color: black;">&#41;</span>
+&nbsp;
+<span style="color: #ff7700;font-weight:bold;">if</span> __name__ == <span style="color: #483d8b;">'__main__'</span>:
+    app = PhotoCtrl<span style="color: black;">&#40;</span><span style="color: black;">&#41;</span>
+    app.<span style="color: black;">MainLoop</span><span style="color: black;">&#40;</span><span style="color: black;">&#41;</span></pre>
+<p>When you run this code, you should see something like this:</p>
+<p><img src="http://www.blog.pythonlibrary.org/wp-content/uploads/2017/10/image_dnd.png" alt="" width="316" height="354" class="aligncenter size-full wp-image-6818" srcset="https://www.blog.pythonlibrary.org/wp-content/uploads/2017/10/image_dnd.png 316w, https://www.blog.pythonlibrary.org/wp-content/uploads/2017/10/image_dnd-268x300.png 268w" sizes="(max-width: 316px) 100vw, 316px" /></p>
+<p>The first class subclass&#8217;s <strong>wx.FileDropTarget</strong> and does the thumbnail creation magic. You will note that we override the <strong>OnDropFiles()</strong> method and create a thumbnail using the <strong>PhotoMaxSize</strong> variable. Then we use pubsub to tell our wxPython application to update itself. The other class is actually a subclass of <strong>wx.App</strong> and contains all the bits and pieces we need to display images. Frankly we don&#8217;t need to subclass wx.App. We could have just as easily sub-classed from wx.Frame for this example. </p>
+<p>Regardless, all we did in this code is create a frame and a panel object, subscribed to a specific subscription with pubsub so it listens for a message from the DropTarget class and then updates the display. You will note that when the application object receives a message via pubsub, it will call the <strong>update_image_on_dnd()</strong> method which in turn will call the <strong>onView()</strong> method. This code basically just scales down the image passed to it so it will fit in our <strong>wx.StaticBitmap</strong> control. Of course, since we&#8217;re already passing in an image that should fit, we could probably add some logic to this method that skips the scaling in certain cases. But I left it in there for when the user opens an image using the browse button.</p>
+<p>Anyway, once we have the image scaled the way we want, we call <strong>SetBitmap</strong> and refresh the panel. Give it a try and see what you can do to improve this example!</p>
+</div><p><a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=https%3A%2F%2Fwww.blog.pythonlibrary.org%2F2017%2F10%2F25%2Fwx_drag_and_drop_images%2F&amp;linkname=wxPython%3A%20Drag%20and%20Drop%20an%20Image%20onto%20Your%20Application" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=https%3A%2F%2Fwww.blog.pythonlibrary.org%2F2017%2F10%2F25%2Fwx_drag_and_drop_images%2F&amp;linkname=wxPython%3A%20Drag%20and%20Drop%20an%20Image%20onto%20Your%20Application" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_google_plus" href="https://www.addtoany.com/add_to/google_plus?linkurl=https%3A%2F%2Fwww.blog.pythonlibrary.org%2F2017%2F10%2F25%2Fwx_drag_and_drop_images%2F&amp;linkname=wxPython%3A%20Drag%20and%20Drop%20an%20Image%20onto%20Your%20Application" title="Google+" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save" href="https://www.addtoany.com/share#url=https%3A%2F%2Fwww.blog.pythonlibrary.org%2F2017%2F10%2F25%2Fwx_drag_and_drop_images%2F&amp;title=wxPython%3A%20Drag%20and%20Drop%20an%20Image%20onto%20Your%20Application" data-a2a-url="https://www.blog.pythonlibrary.org/2017/10/25/wx_drag_and_drop_images/" data-a2a-title="wxPython: Drag and Drop an Image onto Your Application"></a></p>]]></content:encoded>
+			<wfw:commentRss>https://www.blog.pythonlibrary.org/2017/10/25/wx_drag_and_drop_images/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+	</channel>
+</rss>
