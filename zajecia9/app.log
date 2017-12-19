@@ -1,0 +1,32 @@
+INFO:root:start
+INFO:root:1
+INFO:root:+
+INFO:root:2
+INFO:root:=
+DEBUG:root:clear
+INFO:root:4
+INFO:root:/
+INFO:root:2
+INFO:root:+
+INFO:root:=
+WARNING:root:invalid input
+DEBUG:root:clear
+INFO:root:9
+INFO:root:/
+INFO:root:2
+INFO:root:=
+DEBUG:root:clear
+INFO:root:2
+INFO:root:-
+INFO:root:-
+INFO:root:=
+WARNING:root:invalid input
+DEBUG:root:clear
+INFO:root:koniec
+INFO:root:start
+INFO:root:2
+INFO:root:+
+INFO:root:6
+INFO:root:=
+DEBUG:root:clear
+INFO:root:koniec
