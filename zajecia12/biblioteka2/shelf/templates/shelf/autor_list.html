@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends "base.html" %}
+{% block 'content' %}
+
+<ul>
+    {% for autor in object_list%}
+    <li><a href="{% url 'autor-detail' autor.id %}"> {{autor.imie}} {{autor.nazwisko}}</a></li>
+    {% endfor %}
+
+</ul>
+
+
+{% endblock %}
+</body>
+</html>
