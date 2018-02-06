@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>o autorze</title>
+</head>
+<body>
+{% load staticfiles %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="{% static 'blog/style.css' %}">
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="{{ '/news/' }}">Blogowo</a>
+        </div>
+
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="">
+                    <a href="{{ '/news/' }}">
+                        <span class="glyphicon glyphicon-now" aria-hidden="true"></span>&nbsp; Aktualne
+                    </a>
+                </li>
+                <li class="">
+                    <a href="{{ '/news/add/' }}">
+                        <span class="glyphicon glyphicon-now" aria-hidden="true"></span>&nbsp; Dodaj wpis
+                    </a>
+                </li>
+                <li class="activate">
+                    <a href="{% url 'concrete_author' user.pk %}">
+                        <span class="glyphicon glyphicon" aria-hidden="true"></span>&nbsp; Twoje
+                    </a>
+                </li>
+            </ul>
+
+            <form class="navbar-form navbar-left" role="search" method="get" action="{% url 'blog_search' %}">
+                <div class="form-group">
+                    <input type="text"  class="form-control" name="q" placeholder="Szukaj...">
+                </div>
+                <button type="submit" class="btn btn-primary">Wyszukaj</button>
+            </form>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li class="">
+                    <a href="{{ '/accounts/logout/' }}">
+                        <span class="glyphicon glyphicon-off" aria-hidden="true"></span>&nbsp; Wyloguj
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+
+    </div>
+
+
+</nav>
+
+<div class="container">
+
+<h1>Blog użytkownika: {{autor}} </h1>
+
+<h2>Twoje wpisy: </h2>
+
+{% for wpis in news %}
+    {{wpis}}</br>
+{% endfor %}
+
+</div>
+</body>
+</html>
